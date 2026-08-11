@@ -27,4 +27,20 @@ header {
 }
 Menu, h2 {
     font-size:23px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: self-end   ;
+}
+
+.menu-btn{
+    background: white;
+    padding: 7px;
+    border: none;
+    border-radius: 20px;
+}
+
+header .Menu .menu-btn{
+    display: flex;
+    align-items: flex-end;
+    justify-content: end;
 }

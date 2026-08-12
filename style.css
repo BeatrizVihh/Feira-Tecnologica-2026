@@ -2,12 +2,18 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Montserrat", sans-serif;
+    font-family: "Plus Jakarta Sans", sans-serif;
 }
 
 body {
     background: linear-gradient(135deg, #f3ebfc 0%, #fdfbff 100%);
     min-height: 100vh;
+}
+
+h1, h2, h3{
+    font-family: 'Bricolage Grotesque', sans-serif;
+    font-weight: 800;
+    letter-spacing: -0.02em;
 }
 
 header {
@@ -22,6 +28,18 @@ header {
     display: flex;
     align-items: center;
     gap: 10px;
+    text-decoration: none;
+}
+
+.logo p {
+    color: #1e1548;
+    font-size: 20px;
+    font-weight: 700;
+    margin: 0;
+}
+
+.logo img {
+    height: 3rem;
 }
 
 header h1 {
@@ -104,3 +122,74 @@ header h1 {
     transform: translateY(-2px);
 }
 
+.button {
+  position: relative;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+  padding-block: 0.5rem;
+  padding-inline: 1.25rem;
+  background-color: #7a6af3;
+  border-radius: 9999px;
+  display: inline-flex; 
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  gap: 10px;
+  font-weight: bold;
+  border: 3px solid #ffffff4d;
+  outline: none;
+  overflow: hidden;
+  font-size: 15px;
+  cursor: pointer;
+  text-decoration: none; 
+}
+
+.icon {
+  width: 24px;
+  height: 24px;
+  transition: all 0.3s ease-in-out;
+}
+
+.button:hover {
+  transform: scale(1.05);
+  border-color: #fff9;
+}
+
+.button:hover .icon {
+  transform: translate(4px);
+}
+
+.button:hover::before {
+  animation: shine 1.5s ease-out infinite;
+}
+
+.button::before {
+  content: "";
+  position: absolute;
+  width: 100px;
+  height: 100%;
+  background-image: linear-gradient(
+    120deg,
+    rgba(255, 255, 255, 0) 30%,
+    rgba(255, 255, 255, 0.8),
+    rgba(255, 255, 255, 0) 70%
+  );
+  top: 0;
+  left: -100px;
+  opacity: 0.6;
+}
+
+@keyframes shine {
+  0% {
+    left: -100px;
+  }
+
+  60% {
+    left: 100%;
+  }
+
+  to {
+    left: 100%;
+  }
+}
+/* ignorem pois é css do botão */

@@ -9,16 +9,20 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="index.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,700;12..96,800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 
 </head>
 
 <body>
     <header>
-        <div class="logo">
+        <a class="logo" href="paginas/index.html">
             <img src="imgs/logo.png">
-        </div>
-        <h1>Seu Futuro</h1>
+            <p>Seu Futuro</p>
+        </a>
+
         <button class="menu-btn" onclick="toggleMenu()">
             <span> ☰ Menu</span>
         </button>
@@ -27,20 +31,40 @@
         <button class="fechar-btn" onclick="toggleMenu()">&times;</button>
 
         <nav class="overlay-conteudo">
-            <a href="#">Início</a>
-            <a href="#">ETEC</a>
-            <a href="#">Acadêmico</a>
-            <a href="#">Futuro & Carreiras</a>
-            <a href="#">Currículo</a>
-            <a href="#">Saúde Mental</a>
+            <a href="paginas/index.html">Início</a>
+            <a href="paginas/etec.html">ETEC</a>
+            <a href="paginas/academico.html">Acadêmico</a>
+            <a href="paginas/futuro-carreiras.html">Futuro & Carreiras</a>
+            <a href="paginas/curriculum.html">Currículo</a>
+            <a href="paginas/saude-mental.html">Saúde Mental</a>
         </nav>
 
-        <script>
-            function toggleMenu() {
-                const menu = document.getElementById('overlay-menu');
-                menu.classList.toggle('active');
-            }
-        </script>
+    </div>
+    <section class="hero">
+        <div class="hero-conteudo">
+            <h1>Bem-vindo à sua jornada pelo futuro!</h1>
+            <p>Descubra oportunidades e transforme seu potencial.</p>
+            <!-- From Uiverse.io by satyamchaudharydev -->
+            <a class="button" href="paginas/etec.html">
+                Conhecer a ETEC
+                <svg class="icon" viewBox="0 0 24 24" fill="currentColor">
+                    <path fill-rule="evenodd"
+                        d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zm4.28 10.28a.75.75 0 000-1.06l-3-3a.75.75 0 10-1.06 1.06l1.72 1.72H8.25a.75.75 0 000 1.5h5.69l-1.72 1.72a.75.75 0 101.06 1.06l3-3z"
+                        clip-rule="evenodd"></path>
+                </svg>
+            </a>
+
+
+
+        </div>
+    </section>
+
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById('overlay-menu');
+            menu.classList.toggle('active');
+        }
+    </script>
 </body>
 
 </html>

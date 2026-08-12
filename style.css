@@ -1,125 +1,127 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "Plus Jakarta Sans", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Plus Jakarta Sans", sans-serif;
 }
 
 body {
-    background: linear-gradient(135deg, #f3ebfc 0%, #fdfbff 100%);
-    min-height: 100vh;
+  background: linear-gradient(135deg, #f3ebfc 0%, #fdfbff 100%);
+  min-height: 100vh;
 }
 
-h1, h2, h3{
-    font-family: 'Bricolage Grotesque', sans-serif;
-    font-weight: 800;
-    letter-spacing: -0.02em;
+h1,
+h2,
+h3 {
+  font-family: 'Bricolage Grotesque', sans-serif;
+  font-weight: 800;
+  letter-spacing: -0.02em;
 }
 
 header {
-    height: 70px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 40px;
+  height: 70px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 40px;
 }
 
 .logo {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
 }
 
 .logo p {
-    color: #1e1548;
-    font-size: 20px;
-    font-weight: 700;
-    margin: 0;
+  color: #1e1548;
+  font-size: 20px;
+  font-weight: 700;
+  margin: 0;
 }
 
 .logo img {
-    height: 3rem;
+  height: 3rem;
 }
 
 header h1 {
-    color: #1e1548;
-    font-size: 20px;
-    font-weight: 700;
+  color: #1e1548;
+  font-size: 20px;
+  font-weight: 700;
 }
 
 .menu-btn {
-    background: #ffffff;
-    padding: 8px 18px;
-    border: 1px solid #e2d9f3;
-    border-radius: 20px;
-    cursor: pointer;
-    font-weight: 600;
-    color: #3b2d66;
-    transition: background 0.2s;
+  background: #ffffff;
+  padding: 8px 18px;
+  border: 1px solid #e2d9f3;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: 600;
+  color: #3b2d66;
+  transition: background 0.2s;
 }
 
 .menu-btn:hover {
-    background: #f5efff;
+  background: #f5efff;
 }
 
 .overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    background: rgba(238, 233, 254, 0.65);
-    backdrop-filter: blur(16px);
-    -webkit-backdrop-filter: blur(16px);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    opacity: 0;
-    pointer-events: none;
-    transition: opacity 0.3s ease-in-out;
-    z-index: 999;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(238, 233, 254, 0.65);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease-in-out;
+  z-index: 999;
 }
 
 .overlay.active {
-    opacity: 1;
-    pointer-events: auto;
+  opacity: 1;
+  pointer-events: auto;
 }
 
 .fechar-btn {
-    position: absolute;
-    top: 25px;
-    right: 35px;
-    background: #ffffff;
-    border: none;
-    border-radius: 50%;
-    width: 36px;
-    height: 36px;
-    font-size: 22px;
-    color: #3b2d66;
-    cursor: pointer;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  position: absolute;
+  top: 25px;
+  right: 35px;
+  background: #ffffff;
+  border: none;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  font-size: 22px;
+  color: #3b2d66;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
 }
 
 .overlay-conteudo {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
 }
 
 .overlay-conteudo a {
-    text-decoration: none;
-    color: #1e1548;
-    font-size: 32px;
-    font-weight: 700;
-    transition: transform 0.2s, color 0.2s;
+  text-decoration: none;
+  color: #1e1548;
+  font-size: 32px;
+  font-weight: 700;
+  transition: transform 0.2s, color 0.2s;
 }
 
 .overlay-conteudo a:hover {
-    color: #6b46c1;
-    transform: translateY(-2px);
+  color: #6b46c1;
+  transform: translateY(-2px);
 }
 
 .button {
@@ -130,7 +132,7 @@ header h1 {
   padding-inline: 1.25rem;
   background-color: #7a6af3;
   border-radius: 9999px;
-  display: inline-flex; 
+  display: inline-flex;
   align-items: center;
   justify-content: center;
   color: #ffffff;
@@ -141,7 +143,7 @@ header h1 {
   overflow: hidden;
   font-size: 15px;
   cursor: pointer;
-  text-decoration: none; 
+  text-decoration: none;
 }
 
 .icon {
@@ -168,12 +170,10 @@ header h1 {
   position: absolute;
   width: 100px;
   height: 100%;
-  background-image: linear-gradient(
-    120deg,
-    rgba(255, 255, 255, 0) 30%,
-    rgba(255, 255, 255, 0.8),
-    rgba(255, 255, 255, 0) 70%
-  );
+  background-image: linear-gradient(120deg,
+      rgba(255, 255, 255, 0) 30%,
+      rgba(255, 255, 255, 0.8),
+      rgba(255, 255, 255, 0) 70%);
   top: 0;
   left: -100px;
   opacity: 0.6;
@@ -192,4 +192,19 @@ header h1 {
     left: 100%;
   }
 }
+
 /* ignorem pois é css do botão */
+
+#hero {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  justify-content: left;
+  text-align: left;
+  padding: 60px 20px;
+}
+
+.hero-foto {
+  display: flex;
+  justify-content: right;align-items: right;
+}

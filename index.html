@@ -5,21 +5,42 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pagina Inicial</title>
-    <link rel="stylesheet" href="./index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
 
 </head>
 
 <body>
     <header>
-        <h1>Seu Futuro</h1>
-        <div class="Menu">
-            <button class="menu-btn">
-                <h4> ☰ Menu</h4>
-            </button>
+        <div class="logo">
+            <img src="imgs/logo.png">
         </div>
-        <nav>
-        </nav>
+        <h1>Seu Futuro</h1>
+        <button class="menu-btn" onclick="toggleMenu()">
+            <span> ☰ Menu</span>
+        </button>
     </header>
+    <div id="overlay-menu" class="overlay">
+        <button class="fechar-btn" onclick="toggleMenu()">&times;</button>
+
+        <nav class="overlay-conteudo">
+            <a href="#">Início</a>
+            <a href="#">ETEC</a>
+            <a href="#">Acadêmico</a>
+            <a href="#">Futuro & Carreiras</a>
+            <a href="#">Currículo</a>
+            <a href="#">Saúde Mental</a>
+        </nav>
+
+        <script>
+            function toggleMenu() {
+                const menu = document.getElementById('overlay-menu');
+                menu.classList.toggle('active');
+            }
+        </script>
 </body>
 
 </html>

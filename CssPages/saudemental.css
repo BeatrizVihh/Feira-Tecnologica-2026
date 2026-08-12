@@ -1,0 +1,52 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #f3ebfc 0%, #fdfbff 100%);
+  min-height: 100vh;
+}
+
+header {
+  height: 70px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 40px;
+}
+h1,
+h2,
+h3 {
+  font-family: 'Bricolage Grotesque', sans-serif;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
+
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+}
+
+.logo p {
+  color: #1e1548;
+  font-size: 20px;
+  font-weight: 700;
+  margin: 0;
+  
+}
+
+.logo img {
+  height: 3rem;
+}
+
+header h1 {
+  color: #1e1548;
+  font-size: 20px;
+  font-weight: 700;
+}

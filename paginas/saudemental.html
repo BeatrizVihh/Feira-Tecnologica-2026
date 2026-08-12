@@ -20,9 +20,31 @@
             <img src="../imgs/logo.png">
             <p>SaudeMental</p>
         </a>
-        <nav>
+        <button class="menu-btn" onclick="toggleMenu()">
+            <span> ☰ Menu</span>
+        </button>
 
-        </nav>
     </header>
+    <div id="overlay-menu" class="overlay">
+        <button class="fechar-btn" onclick="toggleMenu()">&times;</button>    
+        <nav class="overlay-conteudo">
+            <a href="../index.html">Início</a>
+            <a href="./etec.html">ETEC</a>
+            <a href="./academico.html">Acadêmico</a>
+            <a href="./futuro.html">Futuro & Carreiras</a>
+            <a href="./curriculo.html">Currículo</a>
+            <a href="./saudemental.html">Saúde Mental</a>
+        </nav>
+
+    </div>
+
+    
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById('overlay-menu');
+            menu.classList.toggle('active');
+        }
+    </script>
+
 </body>
 </html>

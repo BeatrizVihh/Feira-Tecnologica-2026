@@ -210,6 +210,23 @@ header h1 {
   box-sizing: border-box;
 }
 
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #5a32a3;
+  background: rgba(255, 255, 255, 0.45); 
+  backdrop-filter: blur(12px);            
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  box-shadow: 0 4px 15px rgba(107, 70, 193, 0.08);
+  padding: 6px 16px;
+  border-radius: 30px;
+  margin-bottom: 16px;
+}
+
 .hero-texto {
   flex: 1;
   max-width: 480px;

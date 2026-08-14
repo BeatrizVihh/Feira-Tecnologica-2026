@@ -261,7 +261,7 @@ header h1 {
   border-radius: 24px;
   object-fit: cover;
   box-shadow: 0 15px 30px rgba(30, 21, 72, 0.08);
-  border: #ffffff ;
+  border: #ffffff 1px thick;
 }
 
 @media (max-width: 820px) {

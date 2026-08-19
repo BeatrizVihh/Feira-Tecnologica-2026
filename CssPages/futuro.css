@@ -203,5 +203,18 @@ header h1 {
   display: flex;
   color: #6f5ea7;
 
-  
+}
+
+.dadosimg {
+
+width: 45px;
+margin-left: 12px;
+
+}
+
+.tertxt {
+
+  margin-top: -38px;
+  margin-left: 65px;
+  font-family: 'Bricolage Grotesque', sans-serif;
 }

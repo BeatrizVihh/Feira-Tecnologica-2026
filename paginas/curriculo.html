@@ -1,36 +1,29 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>academico</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
-        rel="stylesheet">
-    <link
-        href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,700;12..96,800&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../CssPages/academico.css">
 
 </head>
-
 <body>
     <div id="to-top"></div>
     <header>
-        <a class="logo" href="#to-top">
-            <img src="../imgs/logo.png">
-            <p>Curriculo</p>
+        <a class="logo" href="../index.html">
+            <img src="../imgs/logo.png" alt="Logo">
+            <p>Gerador de Currículo</p>
         </a>
-
         <button class="menu-btn" onclick="toggleMenu()">
-            <span> ☰ Menu</span>
+            <span>Menu</span>
         </button>
     </header>
+
     <div id="overlay-menu" class="overlay">
         <button class="fechar-btn" onclick="toggleMenu()">&times;</button>
-
         <nav class="overlay-conteudo">
             <a href="../index.html">Início</a>
             <a href="./etec.html">ETEC</a>
@@ -39,18 +32,66 @@
             <a href="./curriculo.html">Currículo</a>
             <a href="./saudemental.html">Saúde Mental</a>
         </nav>
+    </div>
 
-    </div>
-    <script>
-        function toggleMenu() {
-            const menu = document.getElementById('overlay-menu');
-            menu.classList.toggle('active');
-        }
-    </script>
-     
-    <div class="Titulo">
-        <h2>Gerador de Curriculo</h2>
-    </div>
+    <main class="container-curriculo">
+        <!-- Formulário -->
+        <div class="form-section">
+            <h2>Preencha seus dados</h2>
+            
+            <div class="form-group">
+                <label>Nome Completo</label>
+                <input type="text" id="inputNome" placeholder="Ex: Flávio Santana">
+            </div>
+            <div class="form-group">
+                <label>Cargo / Área de Interesse</label>
+                <input type="text" id="inputCargo" placeholder="Ex: Desenvolvedor Front-end Júnior">
+            </div>
+            <div class="form-group">
+                <label>E-mail</label>
+                <input type="email" id="inputEmail" placeholder="seuemail@exemplo.com">
+            </div>
+            <div class="form-group">
+                <label>Telefone</label>
+                <input type="text" id="inputTelefone" placeholder="(11) 99999-9999">
+            </div>
+            <div class="form-group">
+                <label>Cidade / UF</label>
+                <input type="text" id="inputCidade" placeholder="Ribeirão Pires - SP">
+            </div>
+            <div class="form-group">
+                <label>Objetivo Profissional</label>
+                <textarea id="inputObjetivo" rows="3" placeholder="Conte brevemente sobre seus objetivos..."></textarea>
+            </div>
+            <div class="form-group">
+                <label>Formação Escolar / Curso Técnico</label>
+                <input type="text" id="inputFormacao" placeholder="Ex: Ensino Médio Integrado ao Técnico em TI - ETEC">
+            </div>
+            <div class="form-group">
+                <label>Habilidades (separadas por vírgula)</label>
+                <input type="text" id="inputHabilidades" placeholder="HTML, CSS, JavaScript, React, Git">
+            </div>
+
+            <button class="button" onclick="gerarPDF()">Baixar Currículo em PDF</button>
+        </div>
+
+        <!-- Prévia em tempo real -->
+        <div class="preview-box">
+            <div id="pNome" class="preview-nome">Seu Nome</div>
+            <div id="pCargo" class="preview-cargo">Cargo Desejado</div>
+            <div id="pContatos" class="preview-contatos">email@exemplo.com • (00) 00000-0000 • Cidade/UF</div>
+
+            <div class="preview-secao-titulo">Objetivo</div>
+            <div id="pObjetivo" class="preview-texto">Seu resumo profissional aparecerá aqui.</div>
+
+            <div class="preview-secao-titulo">Formação</div>
+            <div id="pFormacao" class="preview-texto">Sua formação acadêmica ou técnica.</div>
+
+            <div class="preview-secao-titulo">Habilidades</div>
+            <div id="pHabilidades" class="preview-texto">Suas principais competências e conhecimentos.</div>
+        </div>
+    </main>
+
+    <script src="./curriculo.js"></script>
 </body>
-
 </html>

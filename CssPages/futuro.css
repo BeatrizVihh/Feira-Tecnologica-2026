@@ -172,3 +172,37 @@ header h1 {
   transform: translateY(-2px);
   background: transparent;
 }
+
+
+
+/* FUNCIONAMENTO */  
+
+.titulo {
+
+  justify-content: center;
+  display: flex;
+  margin-top: 55px;
+  font-size: 15px;
+  color: #6f5ea7;
+  font-family: 'Bricolage Grotesque', sans-serif;
+
+}
+
+.pritexto {
+
+  justify-content: center;
+  display: flex;
+  margin-top: 5px;
+  font-size: 40px;
+  font-family: 'Bricolage Grotesque', sans-serif;
+
+}
+
+.segtexto {
+
+  justify-content: center;
+  display: flex;
+  color: #6f5ea7;
+
+  
+}

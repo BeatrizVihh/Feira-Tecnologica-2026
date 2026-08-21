@@ -181,7 +181,7 @@ header h1 {
 
   justify-content: center;
   display: flex;
-  margin-top: 55px;
+  margin-top: 35px;
   font-size: 15px;
   color: #6f5ea7;
   font-family: Arial, Helvetica, sans-serif;
@@ -191,30 +191,868 @@ header h1 {
 
   justify-content: center;
   display: flex;
-  margin-top: -6px;
+  margin-top: 2px;
   font-size: 40px;
   font-family: 'Bricolage Grotesque', sans-serif;
 
 }
 
 .segtexto {
-
-  justify-content: center;
-  display: flex;
-  color: #6f5ea7;
-
+  display: block;       /* Altera de flex para block para o text-align funcionar */
+  text-align: center;   /* Centraliza o texto e respeita a quebra do <br> */
+  color: #6f5ea7;       /* Mantém a sua cor roxa */
+  width: 100%;
+  margin-top: 5px;          
 }
+
 
 .dadosimg {
 
-width: 45px;
-margin-left: 12px;
+width: 49px;
+margin-left: 15px;
+margin-top: 45px;
 
 }
 
 .tertxt {
 
-  margin-top: -38px;
-  margin-left: 65px;
+  margin-top: -39px;
+  margin-left: 75px;
   font-family: 'Bricolage Grotesque', sans-serif;
+  font-size: 18px
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #fcfbff;
+    color: #20204d;
+}
+
+
+/* =========================
+   ÁREA PRINCIPAL
+========================= */
+
+.profissoes {
+    width: 100%;
+    min-height: 100vh;
+    padding: 20px 16px 30px;
+}
+
+
+/* =========================
+   TÍTULO
+========================= */
+
+.titulo-pagina {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 24px;
+}
+
+
+.titulo-pagina h1 {
+    font-size: 21px;
+    font-weight: 700;
+    color: #20204d;
+}
+
+
+.icone-titulo {
+    width: 40px;
+    height: 40px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 14px;
+
+    background: #f0edff;
+    color: #735cff;
+
+    font-size: 25px;
+    font-weight: 600;
+}
+
+
+/* =========================
+   CONTAINER DOS CARDS
+========================= */
+
+.cards-container {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 18px;
+
+    width: 100%;
+}
+
+
+/* =========================
+   CARD
+========================= */
+
+.card {
+    min-height: 214px;
+
+    padding: 20px;
+
+    background: #ffffff;
+
+    border: 1px solid #e8e6ff;
+
+    border-radius: 28px;
+
+    box-shadow: 0 10px 25px rgba(111, 92, 255, 0.06);
+
+    transition: 0.25s ease;
+
+    cursor: pointer;
+}
+
+
+.card:hover {
+    transform: translateY(-4px);
+
+    box-shadow: 0 15px 30px rgba(111, 92, 255, 0.12);
+
+    border-color: #dcd7ff;
+}
+
+
+/* =========================
+   ÍCONE DOS CARDS
+========================= */
+
+.icone {
+    width: 44px;
+    height: 44px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 15px;
+
+    margin-bottom: 18px;
+
+    font-size: 22px;
+    font-weight: 500;
+}
+
+
+/* Cores dos ícones */
+
+.tecnologia {
+    background: #f0edff;
+    color: #725cff;
+}
+
+.design {
+    background: #f4efff;
+    color: #9c79e8;
+}
+
+.administracao {
+    background: #eef6ff;
+    color: #82aee0;
+}
+
+.engenharia {
+    background: #eef9f3;
+    color: #80c09d;
+}
+
+.comunicacao {
+    background: #fff2f5;
+    color: #e59aaa;
+}
+
+.saude {
+    background: #eef8ff;
+    color: #85b9d7;
+}
+
+.educacao {
+    background: #f5efff;
+    color: #a58bd1;
+}
+
+.humanas {
+    background: #fff8ee;
+    color: #d8b57c;
+}
+
+
+/* =========================
+   TEXTO DO CARD
+========================= */
+
+.card h2 {
+    font-size: 17px;
+    font-weight: 600;
+
+    color: #20204d;
+
+    margin-bottom: 8px;
+}
+
+
+.card p {
+    max-width: 260px;
+
+    font-size: 13px;
+    line-height: 1.65;
+
+    color: #9998b2;
+}
+
+
+.explorar {
+    display: inline-block;
+
+    margin-top: 17px;
+
+    color: #705cff;
+
+    font-size: 13px;
+    font-weight: 500;
+}
+
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #fcfbff;
+    color: #20204d;
+}
+
+
+/* =========================
+   ÁREA PRINCIPAL
+========================= */
+
+.profissoes {
+  width: 100%;
+  min-height: 100vh;
+  padding: 100px 16px 30px;
+}
+/* =========================
+   TÍTULO
+========================= */
+
+.titulo-pagina {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 24px;
+}
+
+
+.titulo-pagina h1 {
+    font-size: 21px;
+    font-weight: 700;
+    color: #20204d;
+}
+
+
+.icone-titulo {
+    width: 40px;
+    height: 40px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 14px;
+
+    background: #f0edff;
+    color: #735cff;
+
+    font-size: 25px;
+    font-weight: 600;
+}
+
+
+/* =========================
+   CONTAINER DOS CARDS
+========================= */
+
+.cards-container {
+  display: grid;
+  grid-template-columns: repeat(4, 310px);
+  gap: 18px;
+  justify-content: center;
+  width: 100%;
+  margin-top: 65px;
+}
+
+
+
+
+/* =========================
+   CARD
+========================= */
+
+.card {
+    min-height: 214px;
+
+    padding: 20px;
+
+    background: #ffffff;
+
+    border: 1px solid #e8e6ff;
+
+    border-radius: 28px;
+
+    box-shadow: 0 10px 25px rgba(111, 92, 255, 0.06);
+
+    transition: 
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        border-color 0.25s ease;
+
+    cursor: pointer;
+}
+
+
+.card:hover {
+    transform: translateY(-4px);
+
+    box-shadow: 0 15px 30px rgba(111, 92, 255, 0.12);
+
+    border-color: #dcd7ff;
+}
+
+
+/* =========================
+   ÍCONE DOS CARDS
+========================= */
+
+.icone {
+    width: 44px;
+    height: 44px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 15px;
+
+    margin-bottom: 18px;
+
+    font-size: 22px;
+    font-weight: 500;
+}
+
+
+/* =========================
+   CORES DOS ÍCONES
+========================= */
+
+.tecnologia {
+    background: #f0edff;
+    color: #725cff;
+}
+
+.design {
+    background: #f4efff;
+    color: #9c79e8;
+}
+
+.administracao {
+    background: #eef6ff;
+    color: #82aee0;
+}
+
+.engenharia {
+    background: #eef9f3;
+    color: #80c09d;
+}
+
+.comunicacao {
+    background: #fff2f5;
+    color: #e59aaa;
+}
+
+.saude {
+    background: #eef8ff;
+    color: #85b9d7;
+}
+
+.educacao {
+    background: #f5efff;
+    color: #a58bd1;
+}
+
+.humanas {
+    background: #fff8ee;
+    color: #d8b57c;
+}
+
+
+/* =========================
+   TEXTO DO CARD
+========================= */
+
+.card h2 {
+    font-size: 17px;
+    font-weight: 600;
+
+    color: #20204d;
+
+    margin-bottom: 8px;
+}
+
+
+.card p {
+    max-width: 260px;
+
+    font-size: 13px;
+    line-height: 1.65;
+
+    color: #9998b2;
+}
+
+
+/* =========================
+   BOTÃO EXPLORAR
+========================= */
+
+.explorar {
+    display: inline-block;
+
+    margin-top: 17px;
+
+    color: #705cff;
+
+    font-size: 13px;
+    font-weight: 500;
+
+    opacity: 0;
+
+    transform: translateY(5px);
+
+    transition:
+        opacity 0.25s ease,
+        transform 0.25s ease;
+}
+
+
+/* Aparece somente no hover do card */
+
+.card:hover .explorar {
+    opacity: 1;
+
+    transform: translateY(0);
+}
+
+
+/* =========================
+   ANIMAÇÃO DA SETA
+========================= */
+
+.explorar span {
+    display: inline-block;
+
+    margin-left: 3px;
+
+    transition: transform 0.2s ease;
+}
+
+
+.card:hover .explorar span {
+    transform: translateX(3px);
+}
+
+
+/* =========================
+   RESPONSIVIDADE
+========================= */
+
+@media (max-width: 1000px) {
+
+    .cards-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .profissoes {
+        padding: 18px 14px;
+    }
+
+    .cards-container {
+        grid-template-columns: 1fr;
+    }
+
+    .card {
+        min-height: 190px;
+    }
+
+}
+
+
+/* =====================================
+   MODAL DA PROFISSÃO
+===================================== */
+
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+
+  background: rgba(31, 31, 65, 0.42);
+
+  backdrop-filter: blur(6px);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 30px;
+
+  opacity: 0;
+  visibility: hidden;
+
+  pointer-events: none;
+
+  transition:
+      opacity 0.3s ease,
+      visibility 0.3s ease;
+
+  z-index: 9999;
+}
+
+
+/* =====================================
+ MODAL ABERTO
+===================================== */
+
+.modal-overlay.ativo {
+  opacity: 1;
+  visibility: visible;
+
+  pointer-events: auto;
+}
+
+
+/* =====================================
+ CARD GRANDE
+===================================== */
+
+.modal-profissao {
+  position: relative;
+
+  width: 100%;
+  max-width: 700px;
+  max-height: 90vh;
+
+  overflow-y: auto;
+
+  background: #ffffff;
+
+  border-radius: 30px;
+
+  padding: 32px 36px;
+
+  box-shadow:
+      0 25px 70px rgba(35, 30, 80, 0.2);
+
+  transform: translateY(20px) scale(0.97);
+
+  transition: transform 0.3s ease;
+}
+
+
+.modal-overlay.ativo .modal-profissao {
+  transform: translateY(0) scale(1);
+}
+
+
+/* =====================================
+ BOTÃO FECHAR
+===================================== */
+
+.fechar-modal {
+  position: absolute;
+
+  top: 18px;
+  right: 22px;
+
+  width: 38px;
+  height: 38px;
+
+  border: none;
+
+  background: #f4f1ff;
+
+  color: #725cff;
+
+  border-radius: 50%;
+
+  font-size: 25px;
+  line-height: 1;
+
+  cursor: pointer;
+
+  transition: 0.2s ease;
+}
+
+
+.fechar-modal:hover {
+  background: #eae5ff;
+
+  transform: rotate(90deg);
+}
+
+
+/* =====================================
+ ÍCONE GRANDE
+===================================== */
+
+.modal-icone {
+  width: 54px;
+  height: 54px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 17px;
+
+  margin-bottom: 18px;
+
+  font-size: 27px;
+}
+
+
+/* =====================================
+ TÍTULO
+===================================== */
+
+.modal-profissao > h2 {
+  color: #20204d;
+
+  font-size: 25px;
+  font-weight: 700;
+
+  margin-bottom: 3px;
+}
+
+
+.modal-subtitulo {
+  color: #8583a5;
+
+  font-size: 14px;
+  line-height: 1.6;
+
+  margin-bottom: 24px;
+}
+
+
+/* =====================================
+ INFORMAÇÕES
+===================================== */
+
+.info-profissao {
+  margin-bottom: 19px;
+}
+
+
+.info-profissao h3 {
+  display: flex;
+  align-items: center;
+
+  gap: 7px;
+
+  color: #705cff;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  margin-bottom: 5px;
+}
+
+
+.info-profissao p {
+  color: #68678a;
+
+  font-size: 14px;
+  line-height: 1.7;
+
+  margin: 0;
+}
+
+
+/* =====================================
+ ÍCONES SVG
+===================================== */
+
+.svg-icone {
+  width: 17px;
+  height: 17px;
+
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+}
+
+
+.svg-icone svg {
+  width: 17px;
+  height: 17px;
+
+  fill: none;
+
+  stroke: currentColor;
+
+  stroke-width: 1.8;
+
+  stroke-linecap: round;
+
+  stroke-linejoin: round;
+}
+
+
+/* =====================================
+ HABILIDADES
+===================================== */
+
+.habilidades {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 7px;
+
+  margin-top: 8px;
+}
+
+
+.habilidades span {
+  padding: 5px 11px;
+
+  background: #f0f3ff;
+
+  color: #555b91;
+
+  border-radius: 20px;
+
+  font-size: 12px;
+
+  line-height: 1.4;
+}
+
+
+/* =====================================
+ SCROLL DO MODAL
+===================================== */
+
+.modal-profissao::-webkit-scrollbar {
+  width: 6px;
+}
+
+
+.modal-profissao::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+
+.modal-profissao::-webkit-scrollbar-thumb {
+  background: #ddd8f8;
+
+  border-radius: 10px;
+}
+
+
+/* =====================================
+ RESPONSIVIDADE
+===================================== */
+
+@media (max-width: 600px) {
+
+  .modal-overlay {
+      padding: 15px;
+  }
+
+
+  .modal-profissao {
+      padding: 27px 23px;
+
+      border-radius: 25px;
+
+      max-height: 92vh;
+  }
+
+
+  .modal-profissao > h2 {
+      font-size: 22px;
+  }
+
+
+  .modal-profissao p {
+      font-size: 13px;
+  }
+
+}
+
+
+
+
+
+
+/* =========================
+   RESPONSIVIDADE
+========================= */
+
+@media (max-width: 1000px) {
+
+    .cards-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .profissoes {
+        padding: 18px 14px;
+    }
+
+    .cards-container {
+        grid-template-columns: 1fr;
+    }
+
+    .card {
+        min-height: 190px;
+    }
+
 }

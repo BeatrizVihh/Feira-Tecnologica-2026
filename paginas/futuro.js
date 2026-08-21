@@ -60,3 +60,103 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    const cards = document.querySelectorAll(".card");
+
+
+    /* ==============================
+       TECNOLOGIA
+    ============================== */
+
+    const modalTecnologia = document.getElementById("modalTecnologia");
+    const fecharTecnologia = document.getElementById("fecharModal");
+
+
+    cards[0].addEventListener("click", function () {
+
+        modalTecnologia.classList.add("ativo");
+        document.body.style.overflow = "hidden";
+
+    });
+
+
+    fecharTecnologia.addEventListener("click", function () {
+
+        modalTecnologia.classList.remove("ativo");
+        document.body.style.overflow = "";
+
+    });
+
+
+    /* ==============================
+       DESIGN
+    ============================== */
+
+    const modalDesign = document.getElementById("modalDesign");
+    const fecharDesign = document.getElementById("fecharModalDesign");
+
+
+    cards[1].addEventListener("click", function () {
+
+        modalDesign.classList.add("ativo");
+        document.body.style.overflow = "hidden";
+
+    });
+
+
+    fecharDesign.addEventListener("click", function () {
+
+        modalDesign.classList.remove("ativo");
+        document.body.style.overflow = "";
+
+    });
+
+
+    /* ==============================
+       FECHAR CLICANDO FORA
+    ============================== */
+
+    modalTecnologia.addEventListener("click", function (event) {
+
+        if (event.target === modalTecnologia) {
+
+            modalTecnologia.classList.remove("ativo");
+            document.body.style.overflow = "";
+
+        }
+
+    });
+
+
+    modalDesign.addEventListener("click", function (event) {
+
+        if (event.target === modalDesign) {
+
+            modalDesign.classList.remove("ativo");
+            document.body.style.overflow = "";
+
+        }
+
+    });
+
+
+    /* ==============================
+       FECHAR COM ESC
+    ============================== */
+
+    document.addEventListener("keydown", function (event) {
+
+        if (event.key === "Escape") {
+
+            modalTecnologia.classList.remove("ativo");
+            modalDesign.classList.remove("ativo");
+
+            document.body.style.overflow = "";
+
+        }
+
+    });
+
+});

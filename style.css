@@ -311,6 +311,7 @@ header h1 {
   box-shadow: 0 20px 50px rgba(107, 70, 193, 0.08);
 }
 
+/* --- SEÇÃO SOBRE & CARDS --- */
 #sobre {
   width: 100%;
   padding: 60px 48px;
@@ -357,7 +358,12 @@ header h1 {
 .cards1-sobre a,
 .cards2-sobre a {
   text-decoration: none;
+<<<<<<< HEAD
+  color: inherit;
+  display: block;
+=======
   color: black;
+>>>>>>> f63d88ea15b3083334c85728adf9875f538370c8
 }
 
 .card {
@@ -368,7 +374,10 @@ header h1 {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 20px;
   box-shadow: 0 4px 25px rgba(0, 0, 0, 0.03);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  height: 100%;
 }
 
 .card:hover {
@@ -380,6 +389,7 @@ header h1 {
   display: flex;
   align-items: flex-start;
   gap: 16px;
+  flex: 1;
 }
 
 .card-conteudo img {
@@ -401,101 +411,211 @@ header h1 {
   line-height: 1.4;
 }
 
-/* Footer styles */
+.seta {
+  width: 18px;
+  height: 18px;
+  opacity: 0.4;
+  flex-shrink: 0;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.card:hover .seta {
+  opacity: 1;
+  transform: translateX(4px);
+}
+
+/*design do rodapé*/
 footer {
-  background: linear-gradient(180deg, #f6f4fc 0%, #f3ecff 100%);
-  padding: 64px 48px 40px 48px;
-  color: #5b4a80;
+  background-color: #f4f3ff;
+  padding: 60px 48px 30px 48px;
+  color: #554d73;
 }
 
 .footer-conteudo {
   max-width: 1280px;
   margin: 0 auto;
-  display: flex;
-  gap: 48px;
-  align-items: flex-start;
+  display: grid;
+  grid-template-columns: 1.4fr 1fr 1fr 1.2fr;
+  gap: 40px;
 }
 
-.footer-conteudo > div {
-  flex: 1;
-}
-
-.coluna1 {
-  flex: 1.6;
-}
-
-.coluna1 .sub-coluna1 {
+.footer-brand {
   display: flex;
   align-items: center;
   gap: 12px;
+  margin-bottom: 16px;
 }
 
-.coluna1 img {
-  width: 56px;
-  height: 56px;
-  object-fit: cover;
-  border-radius: 50%;
-  padding: 10px;
-  background: linear-gradient(135deg, #7a6af3, #bfa8ff);
-  box-shadow: 0 8px 24px rgba(122,106,243,0.12);
+.logo-footer {
+  height: 36px;
+  width: auto;
+  object-fit: contain;
 }
 
-.coluna1 p {
-  color: #6a5a8f;
-  margin-top: 12px;
-  line-height: 1.6;
+.footer-brand h3 {
+  font-size: 1.25rem;
+  color: #1e1548;
 }
 
-.coluna3 h3,
-.coluna4 h3 {
-  color: #2b234d;
-  letter-spacing: 0.06em;
-  margin-bottom: 14px;
-  font-size: 0.95rem;
-}
-
-.coluna3 h4,
-.coluna4 h4 {
-  color: #5b4a80;
-  font-size: 0.95rem;
-  margin: 6px 0;
-  font-weight: 600;
-  transition: color 0.18s ease;
-}
-
-/* hover roxo pedido */
-.coluna3 h4:hover,
-.coluna4 h4:hover,
-.footer-conteudo h4:hover {
-  color: #6b46c1;
-  cursor: pointer;
-}
-
-.coluna3 p,
-.coluna4 p,
-.coluna1 p {
-  color: #7a6f90;
+.footer-quote {
   font-size: 0.9rem;
+  color: #6c638a;
+  line-height: 1.5;
+  margin-bottom: 24px;
 }
 
-.footer-conteudo ul {
+.ods-section span {
+  display: block;
+  font-size: 0.8rem;
+  color: #7a7099;
+  margin-bottom: 10px;
+}
+
+.ods-links {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.ods-links a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  color: #5b4a80;
+  font-size: 0.85rem;
+  transition: color 0.2s;
+}
+
+.ods-links a:hover {
+  color: #7a6af3;
+}
+
+.ods-links img {
+  width: 24px;
+  height: 24px;
+  border-radius: 4px;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.footer-conteudo h3 {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #2b234d;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.footer-links {
   list-style: none;
-  padding-left: 0;
-  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
-.footer-conteudo ul li {
-  margin: 6px 0;
-  color: #6f6385;
+.footer-links a {
+  text-decoration: none;
+  color: #6c638a;
+  font-size: 0.9rem;
+  transition: color 0.2s;
+}
+
+.footer-links a:hover {
+  color: #7a6af3;
+}
+
+.apoio-item {
+  margin-bottom: 14px;
+}
+
+.apoio-titulo {
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: #2b234d;
+  text-decoration: none;
+  display: inline-block;
+  transition: color 0.2s;
+}
+
+.apoio-titulo:hover {
+  color: #7a6af3;
+}
+
+.apoio-item p {
+  font-size: 0.825rem;
+  color: #8378a3;
+  margin-top: 2px;
+}
+
+.logo_cps {
+  max-width: 180px;
+  height: auto;
+  display: block;
+  margin-bottom: 12px;
+  object-fit: contain;
+}
+
+.curso-info {
+  font-size: 0.85rem;
+  color: #6c638a;
+  margin-bottom: 14px;
+  line-height: 1.4;
+}
+
+.integrantes-label {
+  font-size: 0.85rem;
+  color: #6c638a;
+  margin-bottom: 6px;
+  font-weight: 600;
+}
+
+.integrantes-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-bottom: 16px;
+}
+
+.integrantes-list a {
+  text-decoration: none;
+  color: #6c638a;
+  font-size: 0.85rem;
+  transition: color 0.2s;
+}
+
+.integrantes-list a:hover {
+  color: #7a6af3;
+}
+
+.github-repo-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  color: #7a6af3;
+  font-size: 0.875rem;
+  font-weight: 600;
+  transition: opacity 0.2s;
+}
+
+.github-repo-link:hover {
+  opacity: 0.8;
+  text-decoration: underline;
+}
+
+.github-repo-link img {
+  width: 18px;
+  height: 18px;
 }
 
 footer hr {
   border: none;
-  border-top: 1px solid rgba(110,90,140,0.06);
-  margin: 28px 0;
+  border-top: 1px solid rgba(122, 106, 243, 0.15);
+  margin: 40px auto 20px auto;
   max-width: 1280px;
-  margin-left: auto;
-  margin-right: auto;
 }
 
 .sub-footer {
@@ -503,27 +623,29 @@ footer hr {
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
-  color: #9b8fb4;
-  font-size: 0.85rem;
-  padding-bottom: 12px;
+  color: #9389b0;
+  font-size: 0.8rem;
 }
 
-@media (max-width: 900px) {
-  .footer-conteudo { flex-direction: column; gap: 24px; padding-bottom: 12px; }
-  .coluna1 { flex: none; }
-}
-.seta {
-  width: 18px;
-  height: 18px;
-  opacity: 0.4;
-  transition: transform 0.2s ease, opacity 0.2s ease;
-  margin-left: 12px;
+@media (max-width: 1024px) {
+  .footer-conteudo {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px;
+  }
 }
 
-.card:hover .seta {
-  opacity: 1;
-  transform: translateX(4px);
+@media (max-width: 600px) {
+  .footer-conteudo {
+    grid-template-columns: 1fr;
+  }
+
+  .sub-footer {
+    flex-direction: column;
+    gap: 8px;
+    text-align: center;
+  }
 }
+/*fim do design do rodapé*/
 
 @media (max-width: 1024px) {
   header, #hero, #sobre {

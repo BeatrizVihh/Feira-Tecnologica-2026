@@ -2,7 +2,6 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  color: black;
   font-family: "Plus Jakarta Sans", sans-serif;
 }
 
@@ -13,6 +12,7 @@ html {
 body {
   background: linear-gradient(135deg, #f3ebfc 0%, #fdfbff 100%);
   min-height: 100vh;
+  color: #000000;
 }
 
 h1,
@@ -243,8 +243,6 @@ header h1 {
   }
 }
 
-/* ignorem pois é css do botão */
-
 #hero {
   display: flex;
   align-items: center;
@@ -278,7 +276,7 @@ header h1 {
 }
 
 .hero-texto h1 {
-  font-size: 3.6rem; /* Aumentado para impacto visual igual ao layout */
+  font-size: 3.6rem;
   font-weight: 800;
   color: #1e1548;
   line-height: 1.1;
@@ -311,7 +309,6 @@ header h1 {
   box-shadow: 0 20px 50px rgba(107, 70, 193, 0.08);
 }
 
-/* --- SEÇÃO SOBRE & CARDS --- */
 #sobre {
   width: 100%;
   padding: 60px 48px;
@@ -358,12 +355,8 @@ header h1 {
 .cards1-sobre a,
 .cards2-sobre a {
   text-decoration: none;
-<<<<<<< HEAD
   color: inherit;
   display: block;
-=======
-  color: black;
->>>>>>> f63d88ea15b3083334c85728adf9875f538370c8
 }
 
 .card {
@@ -424,7 +417,7 @@ header h1 {
   transform: translateX(4px);
 }
 
-/*design do rodapé*/
+/* Design do rodapé */
 footer {
   background-color: #f4f3ff;
   padding: 60px 48px 30px 48px;
@@ -439,22 +432,34 @@ footer {
   gap: 40px;
 }
 
+.coluna1 {
+  display: flex;
+  flex-direction: column;
+}
+
 .footer-brand {
   display: flex;
-  align-items: center;
+  align-items: center; 
   gap: 12px;
   margin-bottom: 16px;
 }
 
 .logo-footer {
-  height: 36px;
+  height: 40px; 
   width: auto;
   object-fit: contain;
+  display: block;
+  flex-shrink: 0;
+  margin-bottom: 1rem;
 }
 
 .footer-brand h3 {
-  font-size: 1.25rem;
+  font-size: 1.35rem;
   color: #1e1548;
+  margin: 0;
+  line-height: 1;
+  display: flex;
+  align-items: center;
 }
 
 .footer-quote {
@@ -466,41 +471,53 @@ footer {
 
 .ods-section span {
   display: block;
-  font-size: 0.8rem;
+  font-size: 0.85rem;
+  font-weight: 600;
   color: #7a7099;
-  margin-bottom: 10px;
+  margin-bottom: 12px;
 }
 
 .ods-links {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 14px; 
 }
 
 .ods-links a {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 12px;
   text-decoration: none;
   color: #5b4a80;
-  font-size: 0.85rem;
-  transition: color 0.2s;
+  font-size: 0.95rem; 
+  font-weight: 600;
+  transition: color 0.2s, transform 0.2s;
+  line-height: 1;
 }
 
-.ods-links a:hover {
-  color: #7a6af3;
+.ods-links a:hover,
+.ods-links a:hover span {
+  color: #6756ec !important;
+  transform: translateX(3px); 
 }
 
 .ods-links img {
-  width: 24px;
-  height: 24px;
-  border-radius: 4px;
+  width: 36px;
+  height: 36px; 
+  border-radius: 6px;
   object-fit: cover;
   flex-shrink: 0;
+  display: block;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08); 
+}
+
+.ods-links span {
+  margin: 0;
+  line-height: 1.2;
 }
 
 .footer-conteudo h3 {
-  font-size: 0.85rem;
+  font-size: 1rem;
   font-weight: 700;
   color: #2b234d;
   letter-spacing: 0.05em;
@@ -628,6 +645,19 @@ footer hr {
 }
 
 @media (max-width: 1024px) {
+  header, #hero, #sobre {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+
+  .hero-texto h1 {
+    font-size: 2.8rem;
+  }
+
+  .hero-imagem img {
+    height: 380px;
+  }
+
   .footer-conteudo {
     grid-template-columns: repeat(2, 1fr);
     gap: 32px;
@@ -645,22 +675,8 @@ footer hr {
     text-align: center;
   }
 }
-/*fim do design do rodapé*/
 
-@media (max-width: 1024px) {
-  header, #hero, #sobre {
-    padding-left: 24px;
-    padding-right: 24px;
-  }
-
-  .hero-texto h1 {
-    font-size: 2.8rem;
-  }
-
-  .hero-imagem img {
-    height: 380px;
-  }
-}
+/*Fim do design do rodapé*/
 
 @media (max-width: 820px) {
   #hero {
@@ -685,3 +701,4 @@ footer hr {
     grid-template-columns: 1fr;
   }
 }
+

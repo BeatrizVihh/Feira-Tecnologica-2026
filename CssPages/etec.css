@@ -173,8 +173,32 @@ header h1 {
   background: transparent;
 }
 
-.titulo  {
+.texto1 {
+
+  justify-content: center;
+  display: flex;
+  margin-top: 55px;
+  font-size: 15px;
+  color: #6D5DF5;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.titulo {
+
+  justify-content: center;
+  display: flex;
+  margin-top: -6px;
+  font-size: 40px;
   font-family: 'Bricolage Grotesque', sans-serif;
-  font-weight: 800px;
-  letter-spacing: -0.02em;
+  color: #1E1B4B;
+
+}
+
+.texto2 {
+
+  justify-content: center;
+  display: flex;
+  color: #1E1B4B;
+
+  
 }

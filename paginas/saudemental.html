@@ -40,7 +40,273 @@
         </nav>
 
     </div>
+    
+    <div class="card breathing">
+        <div class="breathing-head">
+          <h3 class="card-title">
+            <span class="icon-mini">🜁</span> Exercício de Respiração
+          </h3>
+          <p class="note">Respire acompanhando o círculo. 4-4-4 acalma o sistema nervoso.</p>
+        </div>
+        <div class="breathing-stage">
+          <div class="breathe-ambient"></div>
+          <div class="breathe-ring"></div>
+          <div class="breathe-shape" id="breatheShape">
+            <div class="breathe-inner">
+              <p class="breathe-label" id="breatheLabel">Pronto?</p>
+              <p class="breathe-count" id="breatheCount"></p>
+            </div>
+          </div>
+        </div>
+        <button class="btn-primary" id="breatheBtn">
+          <span id="breatheBtnText">▶ Começar respiração</span>
+        </button>
+        <p class="note-center">4s inspirando · 4s segurando · 4s expirando</p>
+      </div>
 
+      <!-- Grid de ferramentas -->
+      <div class="grid-2">
+        <!-- Técnica dos 5 sentidos -->
+        <div class="tile soft-tile">
+          <div class="tile-head">
+            <div>
+              <h3 class="tile-title">Técnica dos 5 Sentidos</h3>
+              <p class="tile-sub">Ancoragem para momentos de ansiedade</p>
+            </div>
+            <span class="counter" id="groundingCounter">1/5</span>
+          </div>
+
+          <div class="steps" id="stepsBar">
+            <button class="step active" data-step="0"><span>👁</span></button>
+            <div class="connector"></div>
+            <button class="step" data-step="1"><span>✋</span></button>
+            <div class="connector"></div>
+            <button class="step" data-step="2"><span>👂</span></button>
+            <div class="connector"></div>
+            <button class="step" data-step="3"><span>🜁</span></button>
+            <div class="connector"></div>
+            <button class="step" data-step="4"><span>🍴</span></button>
+          </div>
+
+          <div class="step-prompt">
+            <p class="step-label" id="stepLabel">Ver — 5</p>
+            <p class="step-text" id="stepText">Nomeie 5 coisas que você consegue ver ao redor.</p>
+          </div>
+
+          <div class="step-nav">
+            <button class="nav-prev" id="prevBtn">Anterior</button>
+            <button class="nav-next" id="nextBtn">Próximo →</button>
+          </div>
+        </div>
+
+        <div class="stack">
+          <!-- Anti-ansiedade -->
+          <div class="card">
+            <div class="card-head">
+              <span class="icon-badge lavender"><span>🛡</span></span>
+              <h3 class="card-title-sm">Guia Anti-Ansiedade</h3>
+            </div>
+            <ul class="bullets">
+              <li>Nomeie a emoção: ansiedade, medo, pressa. Nomear reduz o tamanho.</li>
+              <li>Lembre que a ansiedade é uma sensação, não um fato sobre o seu futuro.</li>
+              <li>Use a técnica dos 5 sentidos para voltar ao agora.</li>
+              <li>Beba água, respire devagar e evite cafeína em excesso antes de provas.</li>
+              <li>Fale com alguém de confiança — guardar tudo aumenta a ansiedade.</li>
+            </ul>
+          </div>
+
+          <!-- 5 minutos -->
+          <div class="card">
+            <div class="card-head">
+              <span class="icon-badge mint"><span>⏱</span></span>
+              <h3 class="card-title-sm">Regra dos 5 Minutos</h3>
+            </div>
+            <p class="body">
+              Quando uma tarefa parecer grande demais, combine com você mesmo:
+              <strong>fazer por apenas 5 minutos</strong>. Começar é a parte mais
+              difícil — depois de 5 minutos, geralmente você segue. E se não
+              seguir, tudo bem: 5 minutos já é progresso.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Burnout -->
+      <div class="card wide">
+        <div class="card-head">
+          <span class="icon-badge rose"><span>⚠</span></span>
+          <h3 class="card-title-sm">Prevenindo o burnout escolar</h3>
+        </div>
+        <div class="bullets-grid">
+          <div class="bullet">Durma de 7 a 9 horas — nada substitui o sono.</div>
+          <div class="bullet">Reserve tempo para o que te dá prazer, mesmo que breve.</div>
+          <div class="bullet">Reduza o uso de telas antes de dormir.</div>
+          <div class="bullet">Faça pausas reais durante o estudo (Pomodoro ajuda).</div>
+          <div class="bullet">Se o cansaço não passar, procure apoio profissional.</div>
+        </div>
+      </div>
+
+      <!-- Futuro / Erro -->
+      <div class="grid-2">
+        <div class="card">
+          <div class="card-head">
+            <span class="icon-badge lavender"><span>♡</span></span>
+            <h3 class="card-title-sm">O futuro não é uma linha reta</h3>
+          </div>
+          <p class="body">
+            É normal não ter certeza sobre a profissão. Mudar de ideia não é
+            fracasso — é aprendizado. Experimente, erre, ajuste e siga.
+          </p>
+          <div class="quotes">
+            <div class="quote">
+              <span class="quote-mark">❝</span>
+              <p class="quote-text">No 2º ano eu não sabia o que queria. Hoje curso algo que descobri só aos 22. Não há linha reta — há caminho.</p>
+              <p class="quote-author">— Estudante de Design</p>
+            </div>
+            <div class="quote">
+              <span class="quote-mark">❝</span>
+              <p class="quote-text">Reprovei em Matemática no técnico. Aquilo me ensinou a estudar de outro jeito — hoje é minha área favorita.</p>
+              <p class="quote-author">— Ex-aluno ETEC</p>
+            </div>
+            <div class="quote">
+              <span class="quote-mark">❝</span>
+              <p class="quote-text">Achei que tinha que decidir a vida aos 17. Ninguém tem. Decidir é um processo, não um prazo.</p>
+              <p class="quote-author">— Universitária</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-head">
+            <span class="icon-badge mint"><span>↻</span></span>
+            <h3 class="card-title-sm">Desmitificando o erro</h3>
+          </div>
+          <p class="body">
+            Notas baixas e resultados ruins não são vereditos — são dados. Use
+            cada um para identificar dificuldades e ajustar seus estudos.
+          </p>
+          <div class="bullets">
+            <div class="bullet error">Notas baixas mostram onde o conteúdo ainda não fixou — não o seu valor.</div>
+            <div class="bullet error">Use cada erro como dado: o que faltou? tempo? método? atenção?</div>
+            <div class="bullet error">Refazer uma prova errada é um dos exercícios mais poderosos que existem.</div>
+            <div class="bullet error">Resultado ruim é temporário; desistir de tentar é que vira permanente.</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Cartão de apoio -->
+      <div class="card support">
+        <div class="card-head">
+          <span class="icon-badge lavender-solid"><span>॔</span></span>
+          <div>
+            <h3 class="card-title">Cartão de Apoio</h3>
+            <p class="card-sub">Onde buscar ajuda psicológica gratuita ou acessível</p>
+          </div>
+        </div>
+        <div class="support-grid">
+          <a href__="tel:188" class="support-card">
+            <span class="s-icon lavender">☎</span>
+            <p class="s-title">CVV — 188</p>
+            <p class="s-text">Apoio emocional gratuito 24h, sigiloso</p>
+          </a>
+          <a href__="https://www.gov.br/saude/pt-br/assuntos/saude-de-a-a-z/c/caps" target="_blank" rel="noreferrer" class="support-card">
+            <span class="s-icon mint">♡</span>
+            <p class="s-title">CAPS</p>
+            <p class="s-text">Centros de Atenção Psicossocial do SUS</p>
+          </a>
+          <div class="support-card">
+            <span class="s-icon rose">👁</span>
+            <p class="s-title">Clínicas-escola</p>
+            <p class="s-text">Universidades oferecem atendimento gratuito ou acessível</p>
+          </div>
+        </div>
+        <p class="disclaimer">
+          ⚠️ Este site não substitui atendimento profissional. Se o que você sente
+          está difícil de lidar, procure ajuda — você merece.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    // BreathingCircle
+    const PHASES = [
+      { name: "Inspire", duration: 4, anim: "breathe-in" },
+      { name: "Segure", duration: 4, anim: "breathe-hold" },
+      { name: "Expire", duration: 4, anim: "breathe-out" },
+    ];
+    let running = false, phaseIdx = 0, count = 4, timer = null;
+    const shape = document.getElementById("breatheShape");
+    const label = document.getElementById("breatheLabel");
+    const countEl = document.getElementById("breatheCount");
+    const btnText = document.getElementById("breatheBtnText");
+    function tick() {
+      const phase = PHASES[phaseIdx];
+      label.textContent = phase.name;
+      countEl.textContent = count;
+      shape.classList.remove("breathe-in","breathe-hold","breathe-out");
+      shape.classList.add(phase.anim);
+    }
+    function start() {
+      phaseIdx = 0; count = 4; running = true;
+      btnText.textContent = "⏸ Parar";
+      tick();
+      timer = setInterval(() => {
+        count--;
+        if (count < 1) {
+          phaseIdx = (phaseIdx + 1) % PHASES.length;
+          count = PHASES[phaseIdx].duration;
+        }
+        tick();
+      }, 1000);
+    }
+    function stop() {
+      running = false; clearInterval(timer); phaseIdx = 0; count = 4;
+      shape.classList.remove("breathe-in","breathe-hold","breathe-out");
+      label.textContent = "Pronto?"; countEl.textContent = "";
+      btnText.textContent = "▶ Começar respiração";
+    }
+    document.getElementById("breatheBtn").addEventListener("click", () => {
+      running ? stop() : start();
+    });
+
+    // Grounding5
+    const STEPS = [
+      { label: "Ver", prompt: "Nomeie 5 coisas que você consegue ver ao redor." },
+      { label: "Tocar", prompt: "Sinta 4 coisas que você pode tocar — textura, temperatura." },
+      { label: "Ouvir", prompt: "Identifique 3 sons ao seu redor, próximos ou distantes." },
+      { label: "Cheirar", prompt: "Perceba 2 cheiros no ambiente ou em si mesmo." },
+      { label: "Saborear", prompt: "Reconheça 1 sabor na boca ou pegue algo para saborear." },
+    ];
+    let active = 0;
+    function renderSteps() {
+      const stepBtns = document.querySelectorAll(".step");
+      const connectors = document.querySelectorAll(".connector");
+      stepBtns.forEach((b, i) => {
+        b.classList.remove("active","done");
+        if (i === active) b.classList.add("active");
+        else if (i < active) b.classList.add("done");
+      });
+      connectors.forEach((c, i) => c.classList.toggle("done", i < active));
+      document.getElementById("stepLabel").textContent = STEPS[active].label + " — " + (5 - active);
+      document.getElementById("stepText").textContent = STEPS[active].prompt;
+      document.getElementById("groundingCounter").textContent = (active + 1) + "/5";
+      const prev = document.getElementById("prevBtn");
+      prev.style.opacity = active === 0 ? "0.3" : "1";
+      const next = document.getElementById("nextBtn");
+      next.textContent = active < 4 ? "Próximo →" : "Recomeçar ↺";
+    }
+    document.querySelectorAll(".step").forEach((b, i) => {
+      b.addEventListener("click", () => { active = i; renderSteps(); });
+    });
+    document.getElementById("prevBtn").addEventListener("click", () => {
+      active = Math.max(0, active - 1); renderSteps();
+    });
+    document.getElementById("nextBtn").addEventListener("click", () => {
+      active = active < 4 ? active + 1 : 0; renderSteps();
+    });
+    renderSteps();
+  </script>
     
     <script>
         function toggleMenu() {
@@ -48,6 +314,7 @@
             menu.classList.toggle('active');
         }
     </script>
+
 
 </body>
 </html>

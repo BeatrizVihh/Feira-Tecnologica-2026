@@ -198,12 +198,12 @@ header h1 {
 }
 
 .segtexto {
-
-  justify-content: center;
-  display: flex;
-  color: #6f5ea7;
-
+  display: block;       /* Altera de flex para block para o text-align funcionar */
+  text-align: center;   /* Centraliza o texto e respeita a quebra do <br> */
+  color: #6f5ea7;       /* Mantém a sua cor roxa */
+  width: 100%;          /* Garante que o elemento ocupe toda a largura para poder centralizar */
 }
+
 
 .dadosimg {
 

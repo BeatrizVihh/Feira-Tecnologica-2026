@@ -399,6 +399,117 @@ header h1 {
   line-height: 1.4;
 }
 
+/* Footer styles */
+footer {
+  background: linear-gradient(180deg, #f6f4fc 0%, #f3ecff 100%);
+  padding: 64px 48px 40px 48px;
+  color: #5b4a80;
+}
+
+.footer-conteudo {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: flex;
+  gap: 48px;
+  align-items: flex-start;
+}
+
+.footer-conteudo > div {
+  flex: 1;
+}
+
+.coluna1 {
+  flex: 1.6;
+}
+
+.coluna1 .sub-coluna1 {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.coluna1 img {
+  width: 56px;
+  height: 56px;
+  object-fit: cover;
+  border-radius: 50%;
+  padding: 10px;
+  background: linear-gradient(135deg, #7a6af3, #bfa8ff);
+  box-shadow: 0 8px 24px rgba(122,106,243,0.12);
+}
+
+.coluna1 p {
+  color: #6a5a8f;
+  margin-top: 12px;
+  line-height: 1.6;
+}
+
+.coluna3 h3,
+.coluna4 h3 {
+  color: #2b234d;
+  letter-spacing: 0.06em;
+  margin-bottom: 14px;
+  font-size: 0.95rem;
+}
+
+.coluna3 h4,
+.coluna4 h4 {
+  color: #5b4a80;
+  font-size: 0.95rem;
+  margin: 6px 0;
+  font-weight: 600;
+  transition: color 0.18s ease;
+}
+
+/* hover roxo pedido */
+.coluna3 h4:hover,
+.coluna4 h4:hover,
+.footer-conteudo h4:hover {
+  color: #6b46c1;
+  cursor: pointer;
+}
+
+.coluna3 p,
+.coluna4 p,
+.coluna1 p {
+  color: #7a6f90;
+  font-size: 0.9rem;
+}
+
+.footer-conteudo ul {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 10px;
+}
+
+.footer-conteudo ul li {
+  margin: 6px 0;
+  color: #6f6385;
+}
+
+footer hr {
+  border: none;
+  border-top: 1px solid rgba(110,90,140,0.06);
+  margin: 28px 0;
+  max-width: 1280px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.sub-footer {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  color: #9b8fb4;
+  font-size: 0.85rem;
+  padding-bottom: 12px;
+}
+
+@media (max-width: 900px) {
+  .footer-conteudo { flex-direction: column; gap: 24px; padding-bottom: 12px; }
+  .coluna1 { flex: none; }
+}
 .seta {
   width: 18px;
   height: 18px;

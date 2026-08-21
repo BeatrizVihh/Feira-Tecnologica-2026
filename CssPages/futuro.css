@@ -208,17 +208,18 @@ header h1 {
 
 .dadosimg {
 
-width: 45px;
-margin-left: 12px;
+width: 49px;
+margin-left: 15px;
 margin-top: 45px;
 
 }
 
 .tertxt {
 
-  margin-top: -35px;
-  margin-left: 65px;
+  margin-top: -39px;
+  margin-left: 75px;
   font-family: 'Bricolage Grotesque', sans-serif;
+  font-size: 18px
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');

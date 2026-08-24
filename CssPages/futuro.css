@@ -1526,6 +1526,153 @@ body {
     transition: width 0.3s ease;
 }
 
+/* =====================================
+   TESTE VOCACIONAL - COMPLEMENTOS
+===================================== */
+
+/* Controle de exibição */
+#resultadoCard {
+    display: none;
+}
+
+#resultadoCard.ativo {
+    display: block;
+}
+
+/* Botão Voltar */
+.botao-voltar {
+    margin-top: 22px;
+    padding: 10px 18px;
+    background: #f6f7fd;
+    border: 1px solid #e7e4ff;
+    border-radius: 12px;
+    color: #725cff;
+    font-size: 14px;
+    font-weight: 600;
+    font-family: inherit;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.botao-voltar:hover:not(:disabled) {
+    background: #f0edff;
+}
+
+.botao-voltar:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+}
+
+/* Header do Resultado */
+.resultado-header {
+    text-align: center;
+    margin-bottom: 28px;
+}
+
+.resultado-icone {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 16px;
+}
+
+.compass {
+    font-size: 42px;
+    line-height: 1;
+}
+
+.sparkle {
+    position: absolute;
+    color: #f5c518;
+    font-size: 14px;
+    pointer-events: none;
+}
+
+.sparkle-1 {
+    top: -6px;
+    left: -14px;
+}
+
+.sparkle-2 {
+    bottom: 2px;
+    right: -16px;
+    font-size: 12px;
+}
+
+.resultado-header h3 {
+    margin: 0 0 10px;
+    color: #252354;
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.resultado-header p {
+    margin: 0 auto;
+    max-width: 420px;
+    color: #8582a7;
+    font-size: 14.5px;
+    line-height: 1.65;
+}
+
+/* Áreas do resultado */
+.resultado-areas {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    margin-bottom: 26px;
+}
+
+.area-resultado {
+    padding: 18px 20px;
+    background: #f6f7fd;
+    border: 1px solid #e7e4ff;
+    border-radius: 16px;
+}
+
+.area-icone {
+    font-size: 26px;
+    margin-bottom: 8px;
+}
+
+.area-resultado h3 {
+    margin: 0 0 6px;
+    color: #292653;
+    font-size: 17px;
+    font-weight: 700;
+}
+
+.area-resultado p {
+    margin: 0;
+    color: #555376;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+/* Botão Refazer */
+.botao-refazer {
+    width: 100%;
+    padding: 14px;
+    background: #8067f5;
+    border: none;
+    border-radius: 14px;
+    color: white;
+    font-size: 15px;
+    font-weight: 600;
+    font-family: inherit;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.botao-refazer:hover {
+    background: #6d54e0;
+}
+
+/* Transição da barra */
+.progresso {
+    transition: width 0.3s ease;
+}
+
 
 
 /* =========================

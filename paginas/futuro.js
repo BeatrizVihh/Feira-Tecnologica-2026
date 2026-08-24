@@ -485,9 +485,10 @@ if (modalHumanas) {
     ===================================== */
 
 
-document.addEventListener("DOMContentLoaded", function () {
-    console.log("Teste vocacional carregado!");
-
+/* =========================================
+   TESTE VOCACIONAL
+========================================= */
+(function () {
     const testeCard = document.getElementById("testeCard");
     const resultadoCard = document.getElementById("resultadoCard");
     const perguntaContainer = document.getElementById("perguntaContainer");
@@ -497,8 +498,8 @@ document.addEventListener("DOMContentLoaded", function () {
     const botaoRefazer = document.getElementById("botaoRefazer");
     const resultadoAreas = document.getElementById("resultadoAreas");
 
+    // Se os elementos do teste não existirem na página, não faz nada
     if (!testeCard || !resultadoCard || !perguntaContainer || !contadorPergunta || !progresso) {
-        console.error("Elementos essenciais do teste não encontrados. Verifique os IDs no HTML.");
         return;
     }
 
@@ -615,7 +616,7 @@ document.addEventListener("DOMContentLoaded", function () {
         humanas: 0
     };
 
-    // Garante estado inicial correto
+    // Estado inicial
     resultadoCard.classList.remove("ativo");
     testeCard.style.display = "block";
 
@@ -656,7 +657,6 @@ document.addEventListener("DOMContentLoaded", function () {
         const pergunta = perguntas[perguntaAtual];
         const resposta = pergunta.alternativas[indice];
 
-        // Remove pontos da resposta anterior desta pergunta (se existir)
         if (respostas[perguntaAtual] !== undefined) {
             const anterior = pergunta.alternativas[respostas[perguntaAtual]];
             removerPontos(anterior.pontos);
@@ -712,7 +712,6 @@ document.addEventListener("DOMContentLoaded", function () {
             </div>
         `;
 
-        // Esconde perguntas e mostra resultado
         testeCard.style.display = "none";
         resultadoCard.classList.add("ativo");
 
@@ -722,11 +721,9 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 
-    // Botão Voltar
     botaoVoltar.addEventListener("click", function () {
         if (perguntaAtual === 0) return;
 
-        // Remove pontos da pergunta atual antes de voltar
         if (respostas[perguntaAtual] !== undefined) {
             const atual = perguntas[perguntaAtual].alternativas[respostas[perguntaAtual]];
             removerPontos(atual.pontos);
@@ -736,7 +733,6 @@ document.addEventListener("DOMContentLoaded", function () {
         mostrarPergunta();
     });
 
-    // Botão Refazer
     botaoRefazer.addEventListener("click", function () {
         perguntaAtual = 0;
         respostas = [];
@@ -764,4 +760,4 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Inicia o teste
     mostrarPergunta();
-});
+})();

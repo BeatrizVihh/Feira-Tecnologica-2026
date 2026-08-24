@@ -497,8 +497,8 @@ document.addEventListener("DOMContentLoaded", function () {
     const botaoRefazer = document.getElementById("botaoRefazer");
     const resultadoAreas = document.getElementById("resultadoAreas");
 
-    if (!testeCard || !resultadoCard || !perguntaContainer) {
-        console.error("Elementos essenciais do teste não encontrados.");
+    if (!testeCard || !resultadoCard || !perguntaContainer || !contadorPergunta || !progresso) {
+        console.error("Elementos essenciais do teste não encontrados. Verifique os IDs no HTML.");
         return;
     }
 
@@ -615,6 +615,10 @@ document.addEventListener("DOMContentLoaded", function () {
         humanas: 0
     };
 
+    // Garante estado inicial correto
+    resultadoCard.classList.remove("ativo");
+    testeCard.style.display = "block";
+
     function mostrarPergunta() {
         const pergunta = perguntas[perguntaAtual];
 
@@ -623,7 +627,6 @@ document.addEventListener("DOMContentLoaded", function () {
         const porcentagem = ((perguntaAtual + 1) / perguntas.length) * 100;
         progresso.style.width = `${porcentagem}%`;
 
-        // Gera o HTML no formato antigo (label + radio) para manter o CSS original
         perguntaContainer.innerHTML = `
             <h3>${pergunta.pergunta}</h3>
             <div class="alternativas">
@@ -642,7 +645,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
         botaoVoltar.disabled = perguntaAtual === 0;
 
-        // Evento de clique nas alternativas
         document.querySelectorAll(`input[name="pergunta${perguntaAtual}"]`).forEach(function (input) {
             input.addEventListener("change", function () {
                 selecionarResposta(Number(this.value));
@@ -654,6 +656,7 @@ document.addEventListener("DOMContentLoaded", function () {
         const pergunta = perguntas[perguntaAtual];
         const resposta = pergunta.alternativas[indice];
 
+        // Remove pontos da resposta anterior desta pergunta (se existir)
         if (respostas[perguntaAtual] !== undefined) {
             const anterior = pergunta.alternativas[respostas[perguntaAtual]];
             removerPontos(anterior.pontos);
@@ -673,7 +676,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     function adicionarPontos(pontos) {
-        Object.keys(pontos).forEach(area => {
+        Object.keys(pontos).forEach(function (area) {
             if (pontuacao.hasOwnProperty(area)) {
                 pontuacao[area] += pontos[area];
             }
@@ -681,7 +684,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     function removerPontos(pontos) {
-        Object.keys(pontos).forEach(area => {
+        Object.keys(pontos).forEach(function (area) {
             if (pontuacao.hasOwnProperty(area)) {
                 pontuacao[area] -= pontos[area];
             }
@@ -689,7 +692,9 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     function mostrarResultado() {
-        const ranking = Object.entries(pontuacao).sort((a, b) => b[1] - a[1]);
+        const ranking = Object.entries(pontuacao).sort(function (a, b) {
+            return b[1] - a[1];
+        });
 
         const area1 = areas[ranking[0][0]];
         const area2 = areas[ranking[1][0]];
@@ -707,14 +712,21 @@ document.addEventListener("DOMContentLoaded", function () {
             </div>
         `;
 
+        // Esconde perguntas e mostra resultado
         testeCard.style.display = "none";
         resultadoCard.classList.add("ativo");
-        resultadoCard.scrollIntoView({ behavior: "smooth", block: "center" });
+
+        resultadoCard.scrollIntoView({
+            behavior: "smooth",
+            block: "center"
+        });
     }
 
+    // Botão Voltar
     botaoVoltar.addEventListener("click", function () {
         if (perguntaAtual === 0) return;
 
+        // Remove pontos da pergunta atual antes de voltar
         if (respostas[perguntaAtual] !== undefined) {
             const atual = perguntas[perguntaAtual].alternativas[respostas[perguntaAtual]];
             removerPontos(atual.pontos);
@@ -724,6 +736,7 @@ document.addEventListener("DOMContentLoaded", function () {
         mostrarPergunta();
     });
 
+    // Botão Refazer
     botaoRefazer.addEventListener("click", function () {
         perguntaAtual = 0;
         respostas = [];
@@ -740,9 +753,15 @@ document.addEventListener("DOMContentLoaded", function () {
 
         resultadoCard.classList.remove("ativo");
         testeCard.style.display = "block";
+
         mostrarPergunta();
-        testeCard.scrollIntoView({ behavior: "smooth", block: "center" });
+
+        testeCard.scrollIntoView({
+            behavior: "smooth",
+            block: "center"
+        });
     });
 
+    // Inicia o teste
     mostrarPergunta();
 });

@@ -1,3 +1,4 @@
+
 * {
   margin: 0;
   padding: 0;
@@ -21,6 +22,7 @@ h3 {
   font-weight: 800;
   letter-spacing: -0.02em;
 }
+
 
 header, 
 #hero, 
@@ -193,8 +195,7 @@ header h1 {
   display: flex;
   margin-top: 2px;
   font-size: 40px;
-  font-family: 'Bricolage Grotesque', sans-serif;
-
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .segtexto {
@@ -202,14 +203,14 @@ header h1 {
   text-align: center;   /* Centraliza o texto e respeita a quebra do <br> */
   color: #6f5ea7;       /* Mantém a sua cor roxa */
   width: 100%;
-  margin-top: 5px;          
+  margin-top: 5px;         
 }
 
 
 .dadosimg {
 
 width: 49px;
-margin-left: 15px;
+margin-left: 86px;
 margin-top: 45px;
 
 }
@@ -217,7 +218,7 @@ margin-top: 45px;
 .tertxt {
 
   margin-top: -39px;
-  margin-left: 75px;
+  margin-left: 144px;
   font-family: 'Bricolage Grotesque', sans-serif;
   font-size: 18px
 }
@@ -1023,8 +1024,507 @@ body {
 
 }
 
+/* =====================================
+   TESTE VOCACIONAL
+===================================== */
+
+.teste-vocacional {
+    width: 100%;
+    max-width: 1200px;
+
+    margin: 80px auto 0;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 42px;
+
+    align-items: center;
+}
 
 
+/* =====================================
+   IMAGEM GRANDE
+===================================== */
+
+.imagem-teste {
+    width: 100%;
+    height: 425px;
+    border-radius: 28px;
+    overflow: hidden;
+    background: #f4f2ff;
+    border: 15px solid #ffffff; /* Nota: o segundo 'border' sobrescreveu o primeiro no seu código */
+    box-shadow: 0 20px 50px rgba(80, 70, 150, 0.08);
+}
+
+.imagem-teste img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.4s ease; /* Adiciona a animação suave */
+}
+
+/* Efeito ao passar o mouse */
+.imagem-teste:hover img {
+    transform: scale(1.05); /* Aumenta a imagem em 8% */
+}
+
+/* =====================================
+   ÁREA DO TESTE
+===================================== */
+
+.area-teste {
+    width: 100%;
+}
+
+
+/* =====================================
+   TÍTULO DO TESTE
+===================================== */
+
+.titulo-teste {
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 12px;
+
+    margin-bottom: 26px;
+}
+
+
+.titulo-teste h2 {
+    margin: 7px 0 8px;
+
+    color: #252354;
+
+    font-size: 20px;
+
+    font-weight: 700;
+}
+
+
+.titulo-teste p {
+    margin: 0;
+
+    max-width: 560px;
+
+    color: #8582a7;
+
+    font-size: 15px;
+
+    line-height: 1.7;
+}
+
+
+/* =====================================
+   ÍCONE
+===================================== */
+
+.icone-teste {
+    width: 40px;
+    height: 40px;
+
+    flex-shrink: 0;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 13px;
+
+    background: #f0edff;
+
+    color: #725cff;
+
+    font-size: 21px;
+}
+
+
+.icone-teste.pequeno {
+    width: 34px;
+    height: 34px;
+
+    border-radius: 11px;
+
+    font-size: 18px;
+}
+
+
+/* =====================================
+   CARD DA PERGUNTA
+===================================== */
+
+.card-pergunta {
+    width: 100%;
+
+    background: #ffffff;
+
+    border: 1px solid #e7e4ff;
+
+    border-radius: 30px;
+
+    padding: 32px;
+
+    box-shadow:
+        0 15px 40px rgba(80, 70, 150, 0.07);
+}
+
+
+/* =====================================
+   CABEÇALHO
+===================================== */
+
+.cabecalho-pergunta {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    margin-bottom: 18px;
+}
+
+
+.titulo-pergunta {
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    color: #292653;
+
+    font-size: 16px;
+}
+
+
+.contador {
+    color: #8582a7;
+
+    font-size: 13px;
+}
+
+
+/* =====================================
+   BARRA DE PROGRESSO
+===================================== */
+
+.barra-progresso {
+    width: 100%;
+
+    height: 6px;
+
+    background: #eeeefe;
+
+    border-radius: 10px;
+
+    overflow: hidden;
+
+    margin-bottom: 27px;
+}
+
+
+.progresso {
+    width: 16.66%;
+
+    height: 100%;
+
+    background: #8067f5;
+
+    border-radius: 10px;
+}
+
+
+/* =====================================
+   PERGUNTA
+===================================== */
+
+.card-pergunta h3 {
+    margin: 0 0 20px;
+
+    color: #292653;
+
+    font-size: 18px;
+
+    line-height: 1.4;
+
+    font-weight: 700;
+}
+
+
+/* =====================================
+   ALTERNATIVAS
+===================================== */
+
+.alternativas {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 10px;
+}
+
+
+.alternativa {
+    position: relative;
+
+    width: 100%;
+
+    min-height: 54px;
+
+    padding: 15px 18px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 13px;
+
+    background: #f6f7fd;
+
+    border-radius: 14px;
+
+    color: #555376;
+
+    font-size: 14px;
+
+    cursor: pointer;
+
+    transition: 0.2s ease;
+}
+
+
+.alternativa:hover {
+    background: #f0efff;
+
+    color: #50449a;
+}
+
+
+/* Esconde radio original */
+
+.alternativa input {
+    position: absolute;
+
+    opacity: 0;
+
+    pointer-events: none;
+}
+
+
+/* =====================================
+   RADIO PERSONALIZADO
+===================================== */
+
+.radio {
+    width: 24px;
+    height: 24px;
+
+    flex-shrink: 0;
+
+    border: 2px solid #d4ceff;
+
+    border-radius: 50%;
+
+    background: #ffffff;
+
+    position: relative;
+}
+
+
+/* Quando selecionado */
+
+.alternativa input:checked + .radio {
+    border-color: #8067f5;
+}
+
+
+.alternativa input:checked + .radio::after {
+    content: "";
+
+    position: absolute;
+
+    width: 10px;
+    height: 10px;
+
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+
+    background: #8067f5;
+
+    border-radius: 50%;
+}
+
+
+/* =====================================
+   RESPONSIVIDADE
+===================================== */
+
+@media (max-width: 900px) {
+
+    .teste-vocacional {
+        grid-template-columns: 1fr;
+
+        gap: 30px;
+
+        padding: 0 20px;
+    }
+
+
+    .imagem-teste {
+        height: 350px;
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .teste-vocacional {
+        margin-top: 50px;
+
+        padding: 0 15px;
+    }
+
+
+    .imagem-teste {
+        height: 280px;
+
+        border-radius: 22px;
+    }
+
+
+    .card-pergunta {
+        padding: 23px;
+
+        border-radius: 24px;
+    }
+
+
+    .titulo-teste h2 {
+        font-size: 18px;
+    }
+
+
+    .titulo-teste p {
+        font-size: 13px;
+    }
+
+
+    .card-pergunta h3 {
+        font-size: 16px;
+    }
+
+}
+
+
+/* ===== TESTE VOCACIONAL - RESULTADO ===== */
+
+#resultadoCard {
+    display: none;
+}
+
+#resultadoCard.ativo {
+    display: block;
+}
+
+.botao-voltar {
+    margin-top: 22px;
+    padding: 10px 18px;
+    background: #f6f7fd;
+    border: 1px solid #e7e4ff;
+    border-radius: 12px;
+    color: #725cff;
+    font-size: 14px;
+    font-weight: 600;
+    font-family: inherit;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.botao-voltar:hover:not(:disabled) {
+    background: #f0edff;
+}
+
+.botao-voltar:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+}
+
+.titulo-resultado h3 {
+    margin: 0 0 6px;
+    color: #252354;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.titulo-resultado p {
+    margin: 0 0 22px;
+    color: #8582a7;
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+.resultado-areas {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    margin-bottom: 24px;
+}
+
+.area-resultado {
+    padding: 18px 20px;
+    background: #f6f7fd;
+    border-radius: 16px;
+    border: 1px solid #e7e4ff;
+}
+
+.area-icone {
+    font-size: 26px;
+    margin-bottom: 8px;
+}
+
+.area-resultado h3 {
+    margin: 0 0 6px;
+    color: #292653;
+    font-size: 17px;
+    font-weight: 700;
+}
+
+.area-resultado p {
+    margin: 0;
+    color: #555376;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.botao-refazer {
+    width: 100%;
+    padding: 14px;
+    background: #8067f5;
+    border: none;
+    border-radius: 14px;
+    color: white;
+    font-size: 15px;
+    font-weight: 600;
+    font-family: inherit;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.botao-refazer:hover {
+    background: #6d54e0;
+}
+
+.progresso {
+    transition: width 0.3s ease;
+}
 
 
 

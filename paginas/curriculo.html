@@ -1,17 +1,33 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gerador de Currículo</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="../CssPages/academico.css">
     <link rel="stylesheet" href="../style.css">
     <!-- Biblioteca jsPDF via CDN para exportar em PDF -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
     <style>
+        .hero-section {
+            margin: 3.5rem 0;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        .hero-section h1 {
+            font-family: 'Grotesque', sans-serif;
+            text-align: center;
+            color: #1e1548;
+            margin-bottom: 1rem;
+        }
+
         .container-curriculo {
             max-width: 1200px;
             margin: 40px auto;
@@ -20,53 +36,97 @@
             grid-template-columns: 1fr 1fr;
             gap: 30px;
         }
+
         .form-section {
             background: #ffffff;
             padding: 24px;
             border-radius: 20px;
-            box-shadow: 0 8px 24px rgba(0,0,0,0.05);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
             display: flex;
             flex-direction: column;
             gap: 16px;
         }
+
         .form-group {
             display: flex;
             flex-direction: column;
             gap: 6px;
         }
+
         .form-group label {
             font-size: 13px;
             font-weight: 600;
             color: #3b2d66;
         }
-        .form-group input, .form-group textarea {
+
+        .form-group input,
+        .form-group textarea {
             padding: 10px 14px;
             border: 1px solid #dcd6fa;
             border-radius: 10px;
             font-size: 14px;
             outline: none;
         }
-        .form-group input:focus, .form-group textarea:focus {
+
+        .form-group input:focus,
+        .form-group textarea:focus {
             border-color: #7a6af3;
         }
+
         .preview-box {
             background: #ffffff;
             padding: 30px;
             border-radius: 20px;
-            box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
             border-top: 6px solid #7a6af3;
             min-height: 500px;
         }
-        .preview-nome { font-size: 22px; font-weight: 800; color: #1e1548; margin-bottom: 4px; }
-        .preview-cargo { font-size: 14px; font-weight: 600; color: #7a6af3; margin-bottom: 12px; }
-        .preview-contatos { font-size: 12px; color: #666; margin-bottom: 20px; }
-        .preview-secao-titulo { font-size: 13px; font-weight: 700; color: #1e1548; border-bottom: 1px solid #eee; padding-bottom: 4px; margin-top: 15px; margin-bottom: 8px; text-transform: uppercase; }
-        .preview-texto { font-size: 13px; color: #444; line-height: 1.5; }
+
+        .preview-nome {
+            font-size: 22px;
+            font-weight: 800;
+            color: #1e1548;
+            margin-bottom: 4px;
+        }
+
+        .preview-cargo {
+            font-size: 14px;
+            font-weight: 600;
+            color: #7a6af3;
+            margin-bottom: 12px;
+        }
+
+        .preview-contatos {
+            font-size: 12px;
+            color: #666;
+            margin-bottom: 20px;
+        }
+
+        .preview-secao-titulo {
+            font-size: 13px;
+            font-weight: 700;
+            color: #1e1548;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 4px;
+            margin-top: 15px;
+            margin-bottom: 8px;
+            text-transform: uppercase;
+        }
+
+        .preview-texto {
+            font-size: 13px;
+            color: #444;
+            line-height: 1.5;
+        }
+
         @media (max-width: 850px) {
-            .container-curriculo { grid-template-columns: 1fr; }
+            .container-curriculo {
+                grid-template-columns: 1fr;
+            }
         }
     </style>
 </head>
+
 <body>
     <div id="to-top"></div>
     <header>
@@ -91,11 +151,16 @@
         </nav>
     </div>
 
+    <div class="hero-section">
+        <h1>Crie seu currículo de forma rápida e prática!</h1>
+        <p>Preencha seus dados e baixe seu currículo em PDF.</p>
+    </div>
+
     <main class="container-curriculo">
         <!-- Formulário -->
         <div class="form-section">
             <h2>Preencha seus dados</h2>
-            
+
             <div class="form-group">
                 <label>Nome Completo</label>
                 <input type="text" id="inputNome" placeholder="Ex: Flávio Santana">
@@ -149,7 +214,7 @@
         </div>
     </main>
 
-<footer>
+    <footer>
         <div class="footer-conteudo">
 
             <div class="coluna1">
@@ -157,8 +222,9 @@
                     <img src="../imgs/logo.png" alt="Logo do site" class="logo-footer">
                     <h3>Seu Futuro</h3>
                 </div>
-                <p class="footer-quote">“Apoiando estudantes na rotina escolar, nas escolhas de carreira e no cuidado com a saúde mental.”</p>
-                
+                <p class="footer-quote">“Apoiando estudantes na rotina escolar, nas escolhas de carreira e no cuidado
+                    com a saúde mental.”</p>
+
                 <div class="ods-section">
                     <span>Em apoio às ODS da ONU:</span>
                     <div class="ods-links">
@@ -177,7 +243,7 @@
             <div class="coluna2">
                 <h3>NAVEGAÇÃO RÁPIDA</h3>
                 <ul class="footer-links">
-                    
+
                     <li><a href="../index.html">Página Inicial</a></li>
                     <li><a href="etec.html">ETEC e Vestibulinho</a></li>
                     <li><a href="academico.html">Vestibulares e Faculdade</a></li>
@@ -196,10 +262,12 @@
                     <a href="https://www.cvv.org.br/" target="_blank" class="apoio-titulo">Chat e e-mail do CVV</a>
                 </div>
                 <div class="apoio-item">
-                    <a href="https://www.ribeiraopires.sp.gov.br/portal/secretarias-paginas/13/setores-da-saude/" target="_blank" class="apoio-titulo">CAPS RP — SUS</a>
+                    <a href="https://www.ribeiraopires.sp.gov.br/portal/secretarias-paginas/13/setores-da-saude/"
+                        target="_blank" class="apoio-titulo">CAPS RP — SUS</a>
                 </div>
                 <div class="apoio-item">
-                    <a href="https://www.gov.br/saude/pt-br/composicao/saes/desmad/raps/caps" target="_blank" class="apoio-titulo">CAPS — SUS</a>
+                    <a href="https://www.gov.br/saude/pt-br/composicao/saes/desmad/raps/caps" target="_blank"
+                        class="apoio-titulo">CAPS — SUS</a>
                 </div>
             </div>
 
@@ -207,7 +275,7 @@
                 <h3>CRÉDITOS ACADÊMICOS</h3>
                 <img class="logo_cps" src="../imgs/etec_mcm.png" alt="Logo ETEC MCM / CPS">
                 <p class="curso-info">Curso Técnico em Informática para Internet — 2º Ano F</p>
-                
+
                 <p class="integrantes-label">Integrantes do projeto:</p>
                 <ul class="integrantes-list">
                     <li><a href="https://github.com/alanafiorelini1" target="_blank">Alana Fiorelini</a></li>
@@ -216,16 +284,17 @@
                     <li><a href="https://github.com/EmillyyCampos" target="_blank">Emilly Jaquelini de Oliveira</a></li>
                     <li><a href="https://github.com/eloisamendes" target="_blank">Eloisa Mendes Nunes</a></li>
                 </ul>
-    
-                <a href="https://github.com/BeatrizVihh/Feira-Tecnologica-2026" target="_blank" class="github-repo-link">
+
+                <a href="https://github.com/BeatrizVihh/Feira-Tecnologica-2026" target="_blank"
+                    class="github-repo-link">
                     <img src="../imgs/github.webp" alt="GitHub">
                     <span>Repositório no GitHub</span>
                 </a>
             </div>
         </div>
-    
+
         <hr>
-    
+
         <div class="sub-footer">
             <p>© 2026 Seu Futuro - ETEC. Projeto acadêmico sem fins lucrativos.</p>
             <p>Este site não substitui atendimento profissional de saúde.</p>
@@ -234,4 +303,5 @@
 
     <script src="./curriculo.js"></script>
 </body>
+
 </html>

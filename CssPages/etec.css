@@ -195,43 +195,51 @@ header h1 {
 }
 
 .texto2 {
-
-  justify-content: center;
-  display: flex;
+  display: block;
+  text-align: center;
   color: #1E1B4B;
-
-  
+  margin: 0 auto 24px auto;
+  max-width: 800px; 
 }
 
 .secao-principal {
-    display: flex;
-    align-items: flex-start;
-    justify-content: center;
-    gap: 32px;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
+  display: flex;
+  align-items: center; 
+  justify-content: center;
+  gap: 32px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
 }
+
 
 .cards-container {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
-    flex: 1; 
-    font-family: 'Plus Jakarta Sans', sans-serif;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  flex: 1;
+  font-family: 'Plus Jakarta Sans', sans-serif;
 }
-
+/* Container da imagem ajustado */
 .imagem-container {
-    flex: 1; 
+  flex: 1.2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
 }
 
+/* Imagem achatada mantendo proporções originais */
 .imagem-container img {
-    width: 100%;
-    height: 100%;
-    max-height: 440px;
-    object-fit: cover;
-    border-radius: 24px;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+  width: 100%;
+  max-width: 600px;
+  height: auto; 
+  max-height: 400px; /* Define uma altura máxima menor para achatar a área */
+  border-radius: 20px; /* Bordas ajustadas e suavizadas */
+  object-fit: contain; /* Exibe o tamanho natural da foto sem cortar conteúdo */
+  padding: 8px; /* Redução do espaçamento interno da borda branca */
+  background: #ffffff;
+  box-shadow: 0 10px 30px rgba(107, 70, 193, 0.08);
 }
 
 .card {
@@ -251,7 +259,7 @@ header h1 {
     box-shadow: 0 15px 30px rgba(110, 86, 207, 0.12);
 }
 
-/* Estrutura do Topo do Card (Ícone + Título + Seta) */
+
 .card-header {
     display: flex;
     align-items: center;
@@ -349,6 +357,97 @@ header h1 {
         grid-template-columns: 1fr;
         width: 100%;
     }
+}
+/* Correção do Footer Brand */
+.footer-brand {
+  display: flex;
+  align-items: center; 
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+/* Seção Principal da Comparação */
+.comparacao-section {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+.comparacao-container {
+  background-color: #ffffff;
+  border-radius: 28px;
+  padding: 36px 32px;
+  box-shadow: 0 10px 30px rgba(110, 86, 207, 0.05);
+  border: 1px solid #f0edfe;
+}
+
+.comparacao-titulo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 1.35rem;
+  color: #1e1b4b;
+  margin-bottom: 28px;
+}
+
+.icone-badge {
+  background-color: #ede9fe;
+  color: #6d5df5;
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+}
+
+.comparacao-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.card-comp {
+  background-color: #f9f8fe;
+  border-radius: 18px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.card-comp.destaque {
+  background-color: #ede9fe;
+}
+
+.card-comp.destaque h3 {
+  color: #2b234d;
+}
+
+.card-comp h3 {
+  font-size: 1.1rem;
+  color: #1e1b4b;
+  margin-bottom: 6px;
+}
+
+.card-comp p {
+  font-size: 0.9rem;
+  color: #6a6a82;
+  margin: 0;
+  line-height: 1.4;
+  opacity: 1;
+  max-height: none;
+}
+
+.card-comp p strong {
+  color: #4a4068;
+}
+
+@media (max-width: 850px) {
+  .comparacao-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 /* Design do rodapé */

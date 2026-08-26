@@ -186,7 +186,9 @@ header h1 {
   margin-top: 35px;
   font-size: 15px;
   color: #6f5ea7;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Bricolage Grotesque', sans-serif;
+  font-weight: 800;
+  letter-spacing: -0.02em;
 }
 
 .pritexto {
@@ -195,7 +197,9 @@ header h1 {
   display: flex;
   margin-top: 2px;
   font-size: 40px;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Bricolage Grotesque', sans-serif;
+  font-weight: 800;
+  letter-spacing: -0.02em;
 }
 
 .segtexto {
@@ -203,14 +207,16 @@ header h1 {
   text-align: center;   /* Centraliza o texto e respeita a quebra do <br> */
   color: #6f5ea7;       /* Mantém a sua cor roxa */
   width: 100%;
-  margin-top: 5px;         
+  margin-top: 5px;   
+  font-weight: 800;
+  letter-spacing: -0.02em;      
 }
 
 
 .dadosimg {
 
 width: 49px;
-margin-left: 86px;
+margin-left: 310px;
 margin-top: 45px;
 
 }
@@ -218,9 +224,11 @@ margin-top: 45px;
 .tertxt {
 
   margin-top: -39px;
-  margin-left: 144px;
+  margin-left: 370px;
   font-family: 'Bricolage Grotesque', sans-serif;
-  font-size: 18px
+  font-size: 18px;
+  font-weight: 800;
+  letter-spacing: -0.02em;
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');

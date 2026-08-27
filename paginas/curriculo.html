@@ -140,7 +140,7 @@
     </header>
 
     <div id="overlay-menu" class="overlay">
-        <button class="fechar-btn" onclick="toggleMenu()">&times;</button>
+        <button class="fechar-btn" onclick="toggleMenu()"><span>&times;</span></button>
         <nav class="overlay-conteudo">
             <a href="../index.html">Início</a>
             <a href="./etec.html">ETEC</a>
@@ -304,6 +304,42 @@
     </footer>
 
     <script src="./curriculo.js"></script>
+        <script>
+            document.addEventListener('DOMContentLoaded', () => {
+                // Seleciona todos os links do site
+                const links = document.querySelectorAll('a[href]');
+
+                links.forEach(link => {
+                    link.addEventListener('click', (e) => {
+                        const href = link.getAttribute('href');
+
+                        if (
+                            !href ||
+                            href.startsWith('#') ||
+                            href.startsWith('javascript:') ||
+                            link.target === '_blank' ||
+                            link.hostname !== window.location.hostname
+                        ) {
+                            return;
+                        }
+
+                        e.preventDefault();
+
+                        document.body.classList.add('fade-out');
+
+                        setTimeout(() => {
+                            window.location.href = href;
+                        }, 200);
+                    });
+                });
+            });
+
+            window.addEventListener('pageshow', (event) => {
+                if (event.persisted) {
+                    document.body.classList.remove('fade-out');
+                }
+            });
+        </script>
 </body>
 
 </html>

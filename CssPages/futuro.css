@@ -2079,6 +2079,104 @@ footer hr {
   font-size: 0.8rem;
 }
 
+#entrevista {
+    width: 100%;
+    max-width: 1200px;
+    margin: 80px auto 60px;
+    padding: 0 16px;
+}
+
+.titulo-entrevista {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 32px;
+}
+
+.titulo-entrevista h2 {
+    font-size: 22px;
+    font-weight: 800;
+    color: #1e1548;
+    font-family: 'Bricolage Grotesque', sans-serif;
+}
+
+.icone-titulo-entrevista {
+    width: 40px;
+    height: 40px;
+    border-radius: 12px;
+    background: #eedfff;
+    color: #8c52ff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cards-entrevista {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+.card-entrevista {
+    background: #ffffff;
+    border-radius: 24px;
+    padding: 28px 24px;
+    box-shadow: 0 10px 30px rgba(118, 102, 204, 0.05);
+    border: 1px solid #f0ecff;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.card-entrevista:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 16px 36px rgba(118, 102, 204, 0.12);
+}
+
+.icone-card {
+    width: 44px;
+    height: 44px;
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.icone-card.roxo-suave {
+    background: #f1ebff;
+    color: #7a52f4;
+}
+
+.card-entrevista h3 {
+    font-size: 17px;
+    font-weight: 700;
+    color: #1e1548;
+    margin-bottom: 10px;
+    font-family: 'Bricolage Grotesque', sans-serif;
+}
+
+.card-entrevista p {
+    font-size: 13.5px;
+    line-height: 1.6;
+    color: #8580a3;
+}
+@media (max-width: 1024px) {
+    .cards-entrevista {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 640px) {
+    .cards-entrevista {
+        grid-template-columns: 1fr;
+    }
+    
+    #entrevista {
+        margin-top: 50px;
+    }
+}
+
 @media (max-width: 1024px) {
   .footer-conteudo {
     grid-template-columns: repeat(2, 1fr);

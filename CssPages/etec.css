@@ -249,7 +249,6 @@ header h1 {
   padding: 20px;
 }
 
-
 .cards-container {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -257,7 +256,6 @@ header h1 {
   flex: 1;
   font-family: 'Plus Jakarta Sans', sans-serif;
 }
-/* Container da imagem ajustado */
 .imagem-container {
   flex: 1.2;
   display: flex;
@@ -266,15 +264,14 @@ header h1 {
   position: relative;
 }
 
-/* Imagem achatada mantendo proporções originais */
 .imagem-container img {
   width: 100%;
   max-width: 600px;
   height: auto; 
-  max-height: 400px; /* Define uma altura máxima menor para achatar a área */
-  border-radius: 20px; /* Bordas ajustadas e suavizadas */
-  object-fit: contain; /* Exibe o tamanho natural da foto sem cortar conteúdo */
-  padding: 8px; /* Redução do espaçamento interno da borda branca */
+  max-height: 400px; 
+  border-radius: 20px; 
+  object-fit: contain;
+  padding: 8px; 
   background: #ffffff;
   box-shadow: 0 10px 30px rgba(107, 70, 193, 0.08);
 }
@@ -304,7 +301,6 @@ header h1 {
     position: relative;
 }
 
-/* Ícone com fundo lilás e formato idêntico ao da foto */
 .card .icone {
     width: 48px;
     height: 48px;
@@ -317,7 +313,6 @@ header h1 {
     flex-shrink: 0;
 }
 
-/* Título do Card */
 .card h2 {
     font-size: 1.1rem;
     font-weight: 700;
@@ -327,7 +322,7 @@ header h1 {
     padding-right: 24px;
 }
 
-/* Seta discreta no canto superior direito */
+
 .card .explorar {
     position: absolute;
     right: 0;
@@ -339,13 +334,11 @@ header h1 {
     transition: transform 0.3s ease, color 0.3s ease;
 }
 
-/* Transição ao passar o mouse: Gira a seta para baixo */
 .card:hover .explorar {
     transform: translateY(-50%) rotate(180deg);
     color: #6e56cf;
 }
 
-/* Esconde o texto e faz ele descer suavemente */
 .card p {
     margin: 0;
     color: #6a6a82;
@@ -357,7 +350,6 @@ header h1 {
     transition: max-height 0.4s ease, opacity 0.3s ease, margin-top 0.3s ease;
 }
 
-/* Ao passar o mouse, exibe o texto completo */
 .card:hover p {
     max-height: 150px;
     opacity: 1;
@@ -480,6 +472,237 @@ header h1 {
 .card-comp p strong {
   color: #4a4068;
 }
+
+.card .icone svg {
+  stroke: #6e56cf; 
+}
+
+.icone-badge svg {
+  stroke: #6e56cf;
+}
+
+.container {
+  max-width: 800px;
+  /* Margem: Cima | Direita | Baixo | Esquerda */
+  margin: 40px auto 40px 50px; /* Alinha à esquerda com um recuo de 50px da borda */
+  padding: 100px;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+.container .header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.container .icon-box {
+  width: 48px;
+  height: 48px;
+  background-color: #E8F5E9; 
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.container .icon-box svg {
+  width: 24px;
+  height: 24px;
+  stroke: #4CAF50; 
+}
+
+
+.container h1 {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: #1E1B4B; 
+  margin: 0;
+}
+
+.container ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.container li {
+  position: relative;
+  padding-left: 28px;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #6B7280; 
+}
+
+.container li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 9px;
+  width: 8px;
+  height: 8px;
+  background-color: #8B5CF6;
+  border-radius: 50%;
+}
+
+.dica-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  background-color: #EEECFB;
+  padding: 24px;
+  border-radius: 24px;
+  max-width: 500px;
+}
+
+.dica-icone {
+  background-color: #A58EFF;
+  width: 48px;
+  height: 48px;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.dica-conteudo {
+  flex: 1;
+}
+
+.dica-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.dica-titulo {
+  font-size: 12px;
+  font-weight: 700;
+  color: #6B21A8;
+  letter-spacing: 0.5px;
+}
+
+.btn-trocar {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #6B7280;
+  padding: 4px;
+  display: flex;
+  align-items: center;
+  transition: transform 0.2s ease;
+}
+
+.btn-trocar:hover {
+  transform: rotate(45deg);
+}
+
+#texto-frase {
+  font-size: 18px;
+  font-weight: 600;
+  color: #1E1B4B;
+  margin: 0;
+  line-height: 1.4;
+  transition: opacity 0.3s ease;
+}
+
+/* Layout Lado a Lado */
+.secao-container {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 40px;
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+.bloco-dicas-lista {
+  flex: 1;
+  max-width: 520px;
+}
+
+.header-titulo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.icone-balanca {
+  width: 44px;
+  height: 44px;
+  background-color: #e6f4ea;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #137333;
+  flex-shrink: 0;
+}
+
+.header-titulo h2 {
+  font-size: 1.35rem;
+  color: #1e1b4b;
+  margin: 0;
+}
+
+.lista-pontos {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.lista-pontos li {
+  position: relative;
+  padding-left: 24px;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #5f6368;
+}
+
+.lista-pontos li::before {
+  content: "•";
+  color: #9333ea;
+  font-size: 22px;
+  position: absolute;
+  left: 0;
+  top: -4px;
+}
+
+.dica-card {
+  flex: 1;
+  max-width: 520px;
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  background-color: #eeecfb;
+  padding: 24px;
+  border-radius: 24px;
+}
+
+/* Responsividade para celulares */
+@media (max-width: 900px) {
+  .secao-container {
+    flex-direction: column;
+    gap: 32px;
+  }
+  .bloco-dicas-lista,
+  .dica-card {
+    max-width: 100%;
+    width: 100%;
+  }
+}
+
+
 
 @media (max-width: 850px) {
   .comparacao-grid {

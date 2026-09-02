@@ -47,179 +47,460 @@
 
 
     <main class="container">
-        <!--eu acabei de criar uma area onde vai guardar as informações do começo -->
         <section class="hero">
-            <!--esse section é uma seção aonde vai chmar a secao de destaque que é o hero(academico e as outras coisas) -->
-            <span class="badge-category">ACADÊMICO</span> <!--ecoloquei span para isolar o academico -->
+            <span class="badge-category">.✦ ݁˖ Acadêmico</span>
             <h1>Vestibulares, faculdade e organização</h1>
             <p>Ferramentas práticas e informações claras para você se preparar sem se perder nos prazos.</p>
         </section>
+
+        <section class="grid-tools">
+
+            <div class="card card-pomodoro">
+                <div class="card-header">
+                    <div class="card-title">
+                        <div class="icon-box">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path
+                                    d="M12 5a3 3 0 1 0-5.997.125 4 4 0 0 0-2.526 5.77 4 4 0 0 0 .556 6.588A4 4 0 1 0 12 18Z" />
+                                <path
+                                    d="M12 5a3 3 0 1 1 5.997.125 4 4 0 0 1 2.526 5.77 4 4 0 0 1-.556 6.588A4 4 0 1 1 12 18Z" />
+                                <path d="M15 13a4.5 4.5 0 0 1-3-4 4.5 4.5 0 0 1-3 4" />
+                                <path d="M12 18v4" />
+                                <path d="M12 14v4" />
+                            </svg>
+                        </div>
+                        <h3>Pomodoro</h3>
+                    </div>
+                </div>
+
+                <div class="tab-botao">
+                    <button id="btn-foco" class="botao-foco active" onclick="definirModo('foco')">Foco</button>
+                    <button id="btn-curta" class="botao-curta" onclick="definirModo('curta')">Pausa curta</button>
+                    <button id="btn-longa" class="botao-longa" onclick="definirModo('longa')">Pausa longa</button>
+                </div>
+
+                <div class="timer-circle">
+                    <svg class="timer-progress" viewBox="0 0 200 200">
+                        <circle class="circle-bg" cx="100" cy="100" r="90" />
+                        <circle id="circle-bar" class="circle-bar" cx="100" cy="100" r="90" />
+                    </svg>
+
+                    <div class="timer-content">
+                        <h2 id="timer-display">25:00</h2>
+                        <span id="timer-label">Foco</span>
+                    </div>
+                </div>
+
+                <div class="timer-controls">
+                    <button id="btn-play-pause" class="btn-play" aria-label="Iniciar" onclick="alternarTimer()">
+                        <svg id="icon-play" xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                            viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M8 5v14l11-7z" />
+                        </svg>
+                    </button>
+                    <button class="btn-reset" aria-label="Reiniciar" onclick="resetarTimer()">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8" />
+                            <path d="M3 3v5h5" />
+                        </svg>
+                    </button>
+                </div>
+
+                <div class="timer-pausa-container">
+                    <p id="timer-mensagem" class="timer-pausa">Pausa de 5min ao terminar</p>
+                </div>
+            </div>
+
+            <div class="card card-tarefas">
+                <div class="card-header">
+                    <div class="card-title">
+                        <div class="icon-box">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path d="m3 17 2 2 4-4" />
+                                <path d="m3 7 2 2 4-4" />
+                                <path d="M13 6h8" />
+                                <path d="M13 12h8" />
+                                <path d="M13 18h8" />
+                            </svg>
+                        </div>
+                        <h3>Lista de Tarefas</h3>
+                    </div>
+                    <span class="badge-pendentes" id="badge-pendentes">0 pendentes</span>
+                </div>
+
+                <div class="input-group">
+                    <input type="text" id="tarefa-input" placeholder="Adicione uma tarefa...">
+                    <button class="btn-add" aria-label="Adicionar tarefa" onclick="adicionarTarefa()">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="12" y1="5" x2="12" y2="19" />
+                            <line x1="5" y1="12" x2="19" y2="12" />
+                        </svg>
+                    </button>
+                </div>
+
+                <div class="tarefas-container">
+                    <div class="status-tarefa">
+                        <p>Nenhuma tarefa ainda. Que tal começar com a primeira?</p>
+                    </div>
+                    <ul class="tarefas-lista" id="tarefas-lista"></ul>
+                </div>
+            </div>
+
+        </section>
+        <section class="card card-dicas">
+            <div class="card-header">
+                <div class="card-title">
+                    <div class="icon-box icon-purple">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="m3 17 2 2 4-4" />
+                            <path d="m3 7 2 2 4-4" />
+                            <path d="M13 6h8" />
+                            <path d="M13 12h8" />
+                            <path d="M13 18h8" />
+                        </svg>
+                    </div>
+                    <h2>Dicas de organização e planejamento</h2>
+                </div>
+            </div>
+
+            <div class="dicas-grid">
+                <ul class="dicas-coluna">
+                    <li>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="dica-icon">
+                            <circle cx="12" cy="12" r="10" />
+                            <polyline points="12 6 12 12 16 14" />
+                        </svg>
+                        <span>Divida matérias grandes em blocos pequenos ao longo da semana.</span>
+                    </li>
+                    <li>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="dica-icon">
+                            <circle cx="12" cy="12" r="10" />
+                            <polyline points="12 6 12 12 16 14" />
+                        </svg>
+                        <span>Reserve um dia para revisão e outro para descanso real.</span>
+                    </li>
+                    <li>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="dica-icon">
+                            <circle cx="12" cy="12" r="10" />
+                            <polyline points="12 6 12 12 16 14" />
+                        </svg>
+                        <span>Use o Pomodoro para manter o foco e respeitar pausas.</span>
+                    </li>
+                </ul>
+
+                <ul class="dicas-coluna">
+                    <li>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="dica-icon">
+                            <circle cx="12" cy="12" r="10" />
+                            <polyline points="12 6 12 12 16 14" />
+                        </svg>
+                        <span>Alterne matérias de exatas e humanas para não sobrecarregar o cérebro.</span>
+                    </li>
+                    <li>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="dica-icon">
+                            <circle cx="12" cy="12" r="10" />
+                            <polyline points="12 6 12 12 16 14" />
+                        </svg>
+                        <span>Faça resumos com suas palavras — copiar não fixa conteúdo.</span>
+                    </li>
+                    <li>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="dica-icon">
+                            <circle cx="12" cy="12" r="10" />
+                            <polyline points="12 6 12 12 16 14" />
+                        </svg>
+                        <span>Para TCCs e Projetos Integradores: defina etapas semanais e comece cedo.</span>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="box-destaque-verde">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="destaque-icon">
+                    <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2" />
+                    <rect x="8" y="2" width="8" height="4" rx="1" ry="1" />
+                    <path d="m9 14 2 2 4-4" />
+                </svg>
+                <p><strong>Trabalhos, TCCs e Projetos Integradores:</strong> comece definindo o tema e os critérios de
+                    avaliação. Divida em pesquisa, escrita, revisão e apresentação — com prazos próprios para cada
+                    etapa.
+                    Não deixe tudo para a última semana.</p>
+            </div>
+        </section>
     </main>
 
-    <!-- 3. Grid de Ferramentas -->
-    <section class="grid-tools">
-
-        <!-- Card Pomodoro -->
-        <div class="card"> <!--caixa mae-->
-            <div class="card-header"><!--caixa da parte pomodoro-->
-
-                <h3>Pomodoro</h3>
-            </div>
-            <div class="tab-botao">
-                <button class="botao-foco active">Foco</button>
-                <button class="botao-curta">Pausa curta</button>
-                <button class="botao-longa">Pausa longa</button>
-            </div>
-            <div class="timer-circle">
-                <h2>25:00</h2>
-                <span>Foco</span>
-            </div>
-            <div class="timer-controls">
-                <button class="btn-play">▶</button>
-                <button class="btn-reset">↺</button>
-                <!--esses são os botoes de comando para o tempo-->
-            </div>
-            <p class="timer-pausa">Pausa de 5min ao terminar</p>
+    <section class="sec-abas">
+        <div class="nav-tabs">
+            <button class="btn-tab active" onclick="trocarAba('vestibulares', this)">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="tab-icon">
+                    <rect x="3" y="4" width="18" height="18" rx="2" ry="2" />
+                    <line x1="16" y1="2" x2="16" y2="6" />
+                    <line x1="8" y1="2" x2="8" y2="6" />
+                    <line x1="3" y1="10" x2="21" y2="10" />
+                </svg>
+                Vestibulares & Prazos
+            </button>
+            <button class="btn-tab" onclick="trocarAba('faculdade', this)">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="tab-icon">
+                    <path d="M22 10v6M2 10l10-5 10 5-10 5z" />
+                    <path d="M6 12v5c3 3 9 3 12 0v-5" />
+                </svg>
+                Faculdade
+            </button>
         </div>
 
-        <!-- Card Lista de Tarefas -->
-        <div class="card">
-            <div class="card-header">
+        <div id="aba-vestibulares" class="conteudo-aba active">
+            <div class="cards-grid">
+                <a href="https://www.gov.br/inep/pt-br/areas-de-atuacao/avaliacao-e-exames-educacionais/enem"
+                    class="card-info" target="_blank" aria-label="Acessar site do ENEM">
+                    <div class="card-header-info">
+                        <div class="card-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <rect x="3" y="4" width="18" height="18" rx="2" ry="2" />
+                                <line x1="16" y1="2" x2="16" y2="6" />
+                                <line x1="8" y1="2" x2="8" y2="6" />
+                                <line x1="3" y1="10" x2="21" y2="10" />
+                            </svg>
+                        </div>
+                        <span class="card-link-ext">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <line x1="7" y1="17" x2="17" y2="7" />
+                                <polyline points="7 7 17 7 17 17" />
+                            </svg>
+                        </span>
+                    </div>
+                    <h3>ENEM</h3>
+                    <p>Exame Nacional do Ensino Médio — usado para ingresso em universidades públicas e programas como
+                        SiSU, ProUni e FIES.</p>
+                    <span class="pill-info">Inscrições: maio/jun · Provas: novembro</span>
+                </a>
 
-                <h3>Lista de Tarefas</h3>
-            </div>
-            <div class="input-group">
-                <input type="text" placeholder="Adicione uma tarefa...">
-                <button class="btn-add">+</button>
-                <!--as coisas do botao da listande tarefa, lembra da liçao do bruno-->
-            </div>
-            <div class="status-tarefa">
-                <p>Nenhuma tarefa ainda. Que tal começar com a primeira?</p>
-            </div>
-            <div class="dicas">
-                <h2 class="organização">Dicas de organização e planejamento</h2>
-                <div class="materias1">
-                    <ul>
-                        <li>Divida matérias grandes em blocos pequenos ao longo da semana.</li>
-                        <li>Reserve um dia para revisão e outro para descanso real.</li>
-                        <li>Use o Pomodoro para manter o foco e respeitar pausas.</li>
-                    </ul>
-                </div>
-                <div class="material2">
-                    <ul>
-                        <li>Alterne matérias de exatas e humanas para não sobrecarregar o cérebro.</li>
-                        <li>Faça resumos com suas palavras — copiar não fixa conteúdo.</li>
-                        <li>Para TCCs e Projetos Integradores: defina etapas semanais e comece cedo.</li>
-                    </ul>
-                </div>
-                <br>
-                <div class="verde">
-                    <p class="trabalhos">Trabalhos, TCCs e Projetos Integradores: comece definindo o tema e os critérios de avaliação. Divida em pesquisa, escrita, revisão e apresentação — com prazos próprios para cada etapa. Não deixe tudo para a última semana.</p>
-                </div>
-            </div>
-            <!-- Seção: Alternância entre Vestibulares e Faculdade -->
-<section class="sec-abas">
-    <!-- Botões de Navegação das Abas -->
-    <div class="nav-tabs">
-        <button class="btn-tab active" onclick="trocarAba('vestibulares', this)">
-            <span class="icon">📅</span> Vestibulares & Prazos
-        </button>
-        <button class="btn-tab transparent" onclick="trocarAba('faculdade', this)">
-            <span class="icon">🎓</span> Faculdade
-        </button>
-    </div>
+                <a href="https://www.fuvest.br" class="card-info" target="_blank" aria-label="Acessar site da FuVEST">
+                    <div class="card-header-info">
+                        <div class="card-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <rect x="3" y="4" width="18" height="18" rx="2" ry="2" />
+                                <line x1="16" y1="2" x2="16" y2="6" />
+                                <line x1="8" y1="2" x2="8" y2="6" />
+                                <line x1="3" y1="10" x2="21" y2="10" />
+                            </svg>
+                        </div>
+                        <span class="card-link-ext">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <line x1="7" y1="17" x2="17" y2="7" />
+                                <polyline points="7 7 17 7 17 17" />
+                            </svg>
+                        </span>
+                    </div>
+                    <h3>FuVEST</h3>
+                    <p>Vestibular para a USP (Universidade de São Paulo) e outras instituições vinculadas.</p>
+                    <span class="pill-info">Inscrições: out/nov · Provas: dezembro/janeiro</span>
+                </a>
 
-    <!-- Conteúdo 1: Vestibulares & Prazos (Ativo por padrão) -->
-    <div id="aba-vestibulares" class="conteudo-aba active">
-        <div class="cards-grid">
-            <div class="card-info">
-                <div class="card-icon">📅</div>
-                <a href="#" class="card-link-ext" target="_blank">↗</a>
-                <h3>ENEM</h3>
-                <p>Exame Nacional do Ensino Médio — usado para ingresso em universidades públicas e programas como SiSU, ProUni e FIES.</p>
-                <span class="pill-info">Inscrições: maio/jun · Provas: novembro</span>
-            </div>
+                <a href="https://www.unicamp.br" class="card-info" target="_blank" aria-label="Acessar site da UNICAMP">
+                    <div class="card-header-info">
+                        <div class="card-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <rect x="3" y="4" width="18" height="18" rx="2" ry="2" />
+                                <line x1="16" y1="2" x2="16" y2="6" />
+                                <line x1="8" y1="2" x2="8" y2="6" />
+                                <line x1="3" y1="10" x2="21" y2="10" />
+                            </svg>
+                        </div>
+                        <span class="card-link-ext">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <line x1="7" y1="17" x2="17" y2="7" />
+                                <polyline points="7 7 17 7 17 17" />
+                            </svg>
+                        </span>
+                    </div>
+                    <h3>UNICAMP (Vestibular)</h3>
+                    <p>Processo seletivo da Universidade Estadual de Campinas, com fase específica e prova de redação.
+                    </p>
+                    <span class="pill-info">Inscrições: ago/set · Provas: novembro/dezembro</span>
+                </a>
 
-            <div class="card-info">
-                <div class="card-icon">📅</div>
-                <a href="#" class="card-link-ext" target="_blank">↗</a>
-                <h3>FuVEST</h3>
-                <p>Vestibular para a USP (Universidade de São Paulo) e outras instituições vinculadas.</p>
-                <span class="pill-info">Inscrições: out/nov · Provas: dezembro/janeiro</span>
-            </div>
+                <a href="https://www.vunesp.com.br" class="card-info" target="_blank"
+                    aria-label="Acessar site da UNESP">
+                    <div class="card-header-info">
+                        <div class="card-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <rect x="3" y="4" width="18" height="18" rx="2" ry="2" />
+                                <line x1="16" y1="2" x2="16" y2="6" />
+                                <line x1="8" y1="2" x2="8" y2="6" />
+                                <line x1="3" y1="10" x2="21" y2="10" />
+                            </svg>
+                        </div>
+                        <span class="card-link-ext">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <line x1="7" y1="17" x2="17" y2="7" />
+                                <polyline points="7 7 17 7 17 17" />
+                            </svg>
+                        </span>
+                    </div>
+                    <h3>UNESP</h3>
+                    <p>Vestibular da Universidade Estadual Paulista, com provas em duas fases.</p>
+                    <span class="pill-info">Inscrições: set/out · Provas: novembro/dezembro</span>
+                </a>
 
-            <div class="card-info">
-                <div class="card-icon">📅</div>
-                <a href="#" class="card-link-ext" target="_blank">↗</a>
-                <h3>UNICAMP (Vestibular)</h3>
-                <p>Processo seletivo da Universidade Estadual de Campinas, com fase específica e prova de redação.</p>
-                <span class="pill-info">Inscrições: ago/set · Provas: novembro/dezembro</span>
-            </div>
+                <a href="https://vestibulinho.etec.sp.gov.br/home/" class="card-info" target="_blank"
+                    aria-label="Acessar site do Vestibulinho ETEC">
+                    <div class="card-header-info">
+                        <div class="card-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <rect x="3" y="4" width="18" height="18" rx="2" ry="2" />
+                                <line x1="16" y1="2" x2="16" y2="6" />
+                                <line x1="8" y1="2" x2="8" y2="6" />
+                                <line x1="3" y1="10" x2="21" y2="10" />
+                            </svg>
+                        </div>
+                        <span class="card-link-ext">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <line x1="7" y1="17" x2="17" y2="7" />
+                                <polyline points="7 7 17 7 17 17" />
+                            </svg>
+                        </span>
+                    </div>
+                    <h3>Vestibulinho ETEC</h3>
+                    <p>Processo seletivo para cursos técnicos das ETECs, com prova objetiva e uso de nota do ENEM.</p>
+                    <span class="pill-info">1º sem: fev · 2º sem: ago (varia por ano)</span>
+                </a>
 
-            <div class="card-info">
-                <div class="card-icon">📅</div>
-                <a href="#" class="card-link-ext" target="_blank">↗</a>
-                <h3>UNESP</h3>
-                <p>Vestibular da Universidade Estadual Paulista, com provas em duas fases.</p>
-                <span class="pill-info">Inscrições: set/out · Provas: novembro/dezembro</span>
-            </div>
-
-            <div class="card-info">
-                <div class="card-icon">📅</div>
-                <a href="#" class="card-link-ext" target="_blank">↗</a>
-                <h3>Vestibulinho ETEC</h3>
-                <p>Processo seletivo para cursos técnicos das ETECs, com prova objetiva e uso de nota do ENEM.</p>
-                <span class="pill-info">1º sem: fev · 2º sem: ago (varia por ano)</span>
-            </div>
-
-            <div class="card-info">
-                <div class="card-icon">📅</div>
-                <a href="#" class="card-link-ext" target="_blank">↗</a>
-                <h3>ProUni & FIES</h3>
-                <p>Programas do governo que usam a nota do ENEM para bolsas e financiamento em faculdades particulares.</p>
-                <span class="pill-info">Edital: início de cada semestre</span>
+                <a href="https://www.gov.br/mec/pt-br/acesso-a-informacao/acoes-e-programas/educacao-superior/prouni"
+                    class="card-info" target="_blank" aria-label="Acessar site do ProUni e FIES">
+                    <div class="card-header-info">
+                        <div class="card-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <rect x="3" y="4" width="18" height="18" rx="2" ry="2" />
+                                <line x1="16" y1="2" x2="16" y2="6" />
+                                <line x1="8" y1="2" x2="8" y2="6" />
+                                <line x1="3" y1="10" x2="21" y2="10" />
+                            </svg>
+                        </div>
+                        <span class="card-link-ext">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <line x1="7" y1="17" x2="17" y2="7" />
+                                <polyline points="7 7 17 7 17 17" />
+                            </svg>
+                        </span>
+                    </div>
+                    <h3>ProUni & FIES</h3>
+                    <p>Programas do governo que usam a nota do ENEM para bolsas e financiamento em faculdades
+                        particulares.</p>
+                    <span class="pill-info">Edital: início de cada semestre</span>
+                </a>
             </div>
         </div>
-    </div>
 
-    <!-- Conteúdo 2: Faculdade (Oculto por padrão) -->
-    <div id="aba-faculdade" class="conteudo-aba">
-        <div class="cards-grid">
-            <div class="card-info">
-                <div class="card-icon">📖</div>
-                <h3>Como escolher um curso</h3>
-                <p>Pesquise a grade curricular, converse com profissionais da área, considere suas afinidades e pense no mercado — mas lembre que é possível mudar de ideia.</p>
-            </div>
+        <div id="aba-faculdade" class="conteudo-aba">
+            <div class="cards-grid">
+                <div class="card-info">
+                    <div class="card-icon">
+                        <!-- SVG Livro aberto -->
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z" />
+                            <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z" />
+                        </svg>
+                    </div>
+                    <h3>Como escolher um curso</h3>
+                    <p>Pesquise a grade curricular, converse com profissionais da área, considere suas afinidades e
+                        pense no mercado — mas lembre que é possível mudar de ideia.</p>
+                </div>
 
-            <div class="card-info">
-                <div class="card-icon">🎓</div>
-                <h3>Pública × Particular</h3>
-                <p>Públicas costumam ser gratuitas e concorridas (vestibular/ENEM). Particulares têm mais vagas, mas exigem mensalidade — mitigada com bolsas e FIES.</p>
-            </div>
+                <div class="card-info">
+                    <div class="card-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M22 10v6M2 10l10-5 10 5-10 5z" />
+                            <path d="M6 12v5c3 3 9 3 12 0v-5" />
+                        </svg>
+                    </div>
+                    <h3>Pública × Particular</h3>
+                    <p>Públicas costumam ser gratuitas e concorridas (vestibular/ENEM). Particulares têm mais vagas, mas
+                        exigem mensalidade — mitigada com bolsas e FIES.</p>
+                </div>
 
-            <div class="card-info">
-                <div class="card-icon">📄</div>
-                <h3>Bolsas e formas de ingresso</h3>
-                <p>SiSU (públicas), ProUni (bolsas em particulares), FIES (financiamento), vestibular próprio, ENEM, transferência e segunda graduação.</p>
-            </div>
+                <div class="card-info">
+                    <div class="card-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+                            <polyline points="14 2 14 8 20 8" />
+                            <line x1="16" y1="13" x2="8" y2="13" />
+                            <line x1="16" y1="17" x2="8" y2="17" />
+                            <polyline points="10 9 9 9 8 9" />
+                        </svg>
+                    </div>
+                    <h3>Bolsas e formas de ingresso</h3>
+                    <p>SiSU (públicas), ProUni (bolsas em particulares), FIES (financiamento), vestibular próprio, ENEM,
+                        transferência e segunda graduação.</p>
+                </div>
 
-            <div class="card-info">
-                <div class="card-icon">💡</div>
-                <h3>Antes de escolher a graduação</h3>
-                <p>Considere custo, tempo, localização, mercado, seus interesses reais e se a área combina com seu estilo de vida — não só com a expectativa dos outros.</p>
+                <div class="card-info">
+                    <div class="card-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M9 18h6" />
+                            <path d="M10 22h4" />
+                            <path
+                                d="M15.09 14c.18-.98.65-1.74 1.41-2.5A4.65 4.65 0 0 0 18 8 6 6 0 0 0 6 8c0 1.55.6 2.93 1.5 3.96.7.77 1.2 1.56 1.4 2.54" />
+                        </svg>
+                    </div>
+                    <h3>Antes de escolher a graduação</h3>
+                    <p>Considere custo, tempo, localização, mercado, seus interesses reais e se a área combina com seu
+                        estilo de vida — não só com a expectativa dos outros.</p>
+                </div>
             </div>
         </div>
-    </div>
-</section>
-
-
     </section>
-
-    <div>
-
-    </div>
-
-    </div>
 
     <footer>
         <div class="footer-conteudo">
@@ -310,6 +591,8 @@
         </div>
     </footer>
 
+    <script src="academico.js"></script>
+
     <script>
         function toggleMenu() {
             const menu = document.getElementById('overlay-menu');
@@ -317,43 +600,43 @@
         }
     </script>
 
-        <script>
-            // Script da animação suave entre páginas
-            document.addEventListener('DOMContentLoaded', () => {
-                // Seleciona todos os links do site
-                const links = document.querySelectorAll('a[href]');
+    <script>
+        // Script da animação suave entre páginas
+        document.addEventListener('DOMContentLoaded', () => {
+            // Seleciona todos os links do site
+            const links = document.querySelectorAll('a[href]');
 
-                links.forEach(link => {
-                    link.addEventListener('click', (e) => {
-                        const href = link.getAttribute('href');
+            links.forEach(link => {
+                link.addEventListener('click', (e) => {
+                    const href = link.getAttribute('href');
 
-                        if (
-                            !href ||
-                            href.startsWith('#') ||
-                            href.startsWith('javascript:') ||
-                            link.target === '_blank' ||
-                            link.hostname !== window.location.hostname
-                        ) {
-                            return;
-                        }
+                    if (
+                        !href ||
+                        href.startsWith('#') ||
+                        href.startsWith('javascript:') ||
+                        link.target === '_blank' ||
+                        link.hostname !== window.location.hostname
+                    ) {
+                        return;
+                    }
 
-                        e.preventDefault();
+                    e.preventDefault();
 
-                        document.body.classList.add('fade-out');
+                    document.body.classList.add('fade-out');
 
-                        setTimeout(() => {
-                            window.location.href = href;
-                        }, 200);
-                    });
+                    setTimeout(() => {
+                        window.location.href = href;
+                    }, 200);
                 });
             });
+        });
 
-            window.addEventListener('pageshow', (event) => {
-                if (event.persisted) {
-                    document.body.classList.remove('fade-out');
-                }
-            });
-        </script>
+        window.addEventListener('pageshow', (event) => {
+            if (event.persisted) {
+                document.body.classList.remove('fade-out');
+            }
+        });
+    </script>
 </body>
 
 </html>

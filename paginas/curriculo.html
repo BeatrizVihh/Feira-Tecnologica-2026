@@ -119,6 +119,110 @@
             line-height: 1.5;
         }
 
+        .button-secundario {
+            background-color: #f0f0f0;
+            color: #7a6af3;
+            border: 2px dashed #7a6af3;
+            padding: 10px 16px;
+            border-radius: 12px;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 600;
+            transition: all 0.2s ease;
+            width: 100%;
+            margin-top: 8px;
+        }
+
+        .button-secundario:hover {
+            background-color: #ede9fe;
+            border-color: #7a6af3;
+        }
+
+        .lista-dinamica {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-bottom: 10px;
+        }
+
+        .lista-dinamica {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-bottom: 10px;
+        }
+
+        .item-dinamico {
+            display: flex;
+            gap: 8px;
+            align-items: center;
+        }
+
+        .item-dinamico-duplo {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 8px;
+            padding: 10px;
+            background-color: #f9f9f9;
+            border-radius: 8px;
+            align-items: flex-start;
+        }
+
+        .item-dinamico-duplo-full {
+            grid-column: 1 / -1;
+        }
+
+        .item-dinamico input {
+            flex: 1;
+            padding: 10px 12px;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            font-size: 14px;
+        }
+
+        .item-dinamico input:focus {
+            outline: none;
+            border-color: #7a6af3;
+            box-shadow: 0 0 0 3px rgba(122, 106, 243, 0.1);
+        }
+
+        .item-dinamico-duplo input,
+        .item-dinamico-duplo textarea {
+            padding: 10px 12px;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            font-size: 14px;
+            font-family: inherit;
+        }
+
+        .item-dinamico-duplo input:focus,
+        .item-dinamico-duplo textarea:focus {
+            outline: none;
+            border-color: #7a6af3;
+            box-shadow: 0 0 0 3px rgba(122, 106, 243, 0.1);
+        }
+
+        .btn-remover {
+            background-color: #fee2e2;
+            color: #dc2626;
+            border: none;
+            width: 36px;
+            height: 36px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 18px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.2s ease;
+            flex-shrink: 0;
+        }
+
+        .btn-remover:hover {
+            background-color: #fca5a5;
+            color: #991b1b;
+        }
+
         @media (max-width: 850px) {
             .container-curriculo {
                 grid-template-columns: 1fr;
@@ -163,7 +267,7 @@
 
             <div class="form-group">
                 <label>Nome Completo</label>
-                <input type="text" id="inputNome" placeholder="Ex: Joana">
+                <input type="text" id="inputNome" placeholder="Ex: Jolana">
             </div>
             <div class="form-group">
                 <label>Cargo / Área de Interesse</label>
@@ -182,16 +286,41 @@
                 <input type="text" id="inputCidade" placeholder="Ribeirão Pires - SP">
             </div>
             <div class="form-group">
+                <label>LinkedIn</label>
+                <input type="text" id="inputLinkedin" placeholder="linkedin.com/in/seu-perfil">
+            </div>
+            <div class="form-group">
+                <label>GitHub</label>
+                <input type="text" id="inputGithub" placeholder="github.com/seu-usuario">
+            </div>
+            <div class="form-group">
                 <label>Objetivo Profissional</label>
                 <textarea id="inputObjetivo" rows="3" placeholder="Conte brevemente sobre seus objetivos..."></textarea>
             </div>
             <div class="form-group">
                 <label>Formação Escolar / Curso Técnico</label>
-                <input type="text" id="inputFormacao" placeholder="Ex: Ensino Médio Integrado ao Técnico em TI - ETEC">
+                <div id="formacoes-lista" class="lista-dinamica"></div>
+                <button type="button" class="button-secundario" onclick="adicionarFormacao()">+ Adicionar formação</button>
             </div>
+
+            <!-- Cursos Complementares -->
             <div class="form-group">
-                <label>Habilidades (separadas por vírgula)</label>
-                <input type="text" id="inputHabilidades" placeholder="HTML, CSS, JavaScript">
+                <label>Cursos Complementares</label>
+                <div id="cursos-lista" class="lista-dinamica"></div>
+                <button type="button" class="button-secundario" onclick="adicionarCurso()">+ Adicionar curso</button>
+            </div>
+
+            <!-- Projetos Escolares -->
+            <div class="form-group">
+                <label>Projetos Escolares</label>
+                <div id="projetos-lista" class="lista-dinamica"></div>
+                <button type="button" class="button-secundario" onclick="adicionarProjeto()">+ Adicionar projeto</button>
+            </div>
+
+            <div class="form-group">
+                <label>Habilidades</label>
+                <div id="habilidades-lista" class="lista-dinamica"></div>
+                <button type="button" class="button-secundario" onclick="adicionarHabilidade()">+ Adicionar habilidade</button>
             </div>
 
             <button class="button" onclick="gerarPDF()">Baixar Currículo em PDF</button>
@@ -208,6 +337,12 @@
 
             <div class="preview-secao-titulo">Formação</div>
             <div id="pFormacao" class="preview-texto">Sua formação acadêmica ou técnica.</div>
+
+            <div class="preview-secao-titulo">Cursos Complementares</div>
+            <div id="pCursos" class="preview-texto">Seus cursos complementares aparecerão aqui.</div>
+
+            <div class="preview-secao-titulo">Projetos Escolares</div>
+            <div id="pProjetos" class="preview-texto">Seus projetos escolares aparecerão aqui.</div>
 
             <div class="preview-secao-titulo">Habilidades</div>
             <div id="pHabilidades" class="preview-texto">Suas principais competências e conhecimentos.</div>

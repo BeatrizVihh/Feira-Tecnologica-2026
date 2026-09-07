@@ -15,6 +15,8 @@
     <link rel="stylesheet" href="../CssPages/academico.css">
     <link rel="stylesheet" href="../CssPages/etec.css">
     <link rel="icon" type="image/png" href="../imgs/logo.png">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 </head>
 
 <body>
@@ -57,9 +59,10 @@
     </h1>
 
     <p class="texto2">
-        Entenda como funciona a escola técnica, o Vestibulinho e por que um curso técnico pode mudar a sua trajetória ainda no Ensino Médio.
+        Entenda como funciona a escola técnica, o Vestibulinho e por que um curso técnico pode mudar a sua trajetória
+        ainda no Ensino Médio.
     </p>
-    
+
     <div class="secao-principal">
         <!-- Lado Esquerdo: Cards -->
         <div class="cards-container">
@@ -68,7 +71,11 @@
                 <div class="card-header">
                     <div class="icone">
                         <!-- Ícone: Chapéu de Formatura / Educação -->
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M22 10v6M2 10l10-5 10 5-10 5z" />
+                            <path d="M6 12v5c3 3 9 3 12 0v-5" />
+                        </svg>
                     </div>
                     <h2>O que é a ETEC</h2>
                     <span class="explorar">ˆ</span>
@@ -84,7 +91,14 @@
                 <div class="card-header">
                     <div class="icone">
                         <!-- Ícone: Prova / Vestibulinho -->
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+                            <polyline points="14 2 14 8 20 8" />
+                            <line x1="16" y1="13" x2="8" y2="13" />
+                            <line x1="16" y1="17" x2="8" y2="17" />
+                            <polyline points="10 9 9 9 8 9" />
+                        </svg>
                     </div>
                     <h2>Como funciona o Vestibulinho</h2>
                     <span class="explorar">ˆ</span>
@@ -100,7 +114,12 @@
                 <div class="card-header">
                     <div class="icone">
                         <!-- Ícone: Alvo / Preparação -->
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="10" />
+                            <circle cx="12" cy="12" r="6" />
+                            <circle cx="12" cy="12" r="2" />
+                        </svg>
                     </div>
                     <h2>Como se preparar</h2>
                     <span class="explorar">ˆ</span>
@@ -116,7 +135,12 @@
                 <div class="card-header">
                     <div class="icone">
                         <!-- Ícone: Foguete / Vantagens e Carreira -->
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.71 1.1-1.63 1.1-2.58 0-.95-.39-1.87-1.1-2.58l-3 3z"/><path d="M12 15l-3-3 8.5-8.5c1.1-1.1 2.87-1.1 3.97 0 1.1 1.1 1.1 2.87 0 3.97L12 15z"/></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path
+                                d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.71 1.1-1.63 1.1-2.58 0-.95-.39-1.87-1.1-2.58l-3 3z" />
+                            <path d="M12 15l-3-3 8.5-8.5c1.1-1.1 2.87-1.1 3.97 0 1.1 1.1 1.1 2.87 0 3.97L12 15z" />
+                        </svg>
                     </div>
                     <h2>Vantagens do curso técnico</h2>
                     <span class="explorar">ˆ</span>
@@ -141,7 +165,12 @@
             <h2 class="comparacao-titulo">
                 <span class="icone-badge">
                     <!-- Ícone: Camadas / Comparação -->
-                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <polygon points="12 2 2 7 12 12 22 7 12 2" />
+                        <polyline points="2 17 12 22 22 17" />
+                        <polyline points="2 12 12 17 22 12" />
+                    </svg>
                 </span> Ensino Médio × Técnico × Superior
             </h2>
 
@@ -171,51 +200,89 @@
     </section>
 
     <div class="secao-container">
-  
-      <!-- Bloco Esquerdo (Lista) -->
-      <div class="bloco-dicas-lista">
-        <div class="header-titulo">
-          <div class="icone-balanca">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M12 3v18M3 7l9-4 9 4M4 11l4 7M16 18l4-7M4 11h8M12 11h8"/>
-            </svg>
-          </div>
-          <h2>Conciliando Ensino Médio + Técnico</h2>
+
+        <!-- Bloco Esquerdo (Lista) -->
+        <div class="bloco-dicas-lista">
+            <div class="header-titulo">
+                <div class="icone-balanca">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M12 3v18M3 7l9-4 9 4M4 11l4 7M16 18l4-7M4 11h8M12 11h8" />
+                    </svg>
+                </div>
+                <h2>Conciliando Ensino Médio + Técnico</h2>
+            </div>
+
+            <ul class="lista-pontos">
+                <li>Use um calendário único para escola + técnico — evite choque de prazos.</li>
+                <li>Aproveite matérias em comum para estudar uma vez e aplicar nos dois.</li>
+                <li>Reserve tempo de descanso: conciliar exige energia, não só tempo.</li>
+                <li>Projetos integradores podem virar portfólio para o primeiro emprego.</li>
+                <li>Não tenha vergonha de pedir ajuda a professores e colegas.</li>
+            </ul>
         </div>
-    
-        <ul class="lista-pontos">
-          <li>Use um calendário único para escola + técnico — evite choque de prazos.</li>
-          <li>Aproveite matérias em comum para estudar uma vez e aplicar nos dois.</li>
-          <li>Reserve tempo de descanso: conciliar exige energia, não só tempo.</li>
-          <li>Projetos integradores podem virar portfólio para o primeiro emprego.</li>
-          <li>Não tenha vergonha de pedir ajuda a professores e colegas.</li>
-        </ul>
-      </div>
-    
-      <!-- Bloco Direito (Dica do Dia) -->
-      <div class="dica-card">
-        <div class="dica-icone">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <path d="M12 2l2.4 6.6L21 11l-5 4.6L17.2 22 12 18.6 6.8 22 8 15.6 3 11l6.6-2.4L12 2z"/>
-          </svg>
+
+        <!-- Bloco Direito (Dica do Dia) -->
+        <div class="dica-card">
+            <div class="dica-icone">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 2l2.4 6.6L21 11l-5 4.6L17.2 22 12 18.6 6.8 22 8 15.6 3 11l6.6-2.4L12 2z" />
+                </svg>
+            </div>
+
+            <div class="dica-conteudo">
+                <div class="dica-header">
+                    <span class="dica-titulo">DICA DO DIA</span>
+                    <button id="btn-trocar-frase" class="btn-trocar" title="Trocar frase">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path d="M23 4v6h-6M1 20v-6h6" />
+                            <path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15" />
+                        </svg>
+                    </button>
+                </div>
+                <p id="texto-frase">"A escola ensina a pensar, mas é você quem escolhe para onde direcionar suas
+                    ideias."</p>
+            </div>
         </div>
-    
-        <div class="dica-conteudo">
-          <div class="dica-header">
-            <span class="dica-titulo">DICA DO DIA</span>
-            <button id="btn-trocar-frase" class="btn-trocar" title="Trocar frase">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M23 4v6h-6M1 20v-6h6"/>
-                <path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"/>
-              </svg>
-            </button>
-          </div>
-          <p id="texto-frase">"A escola ensina a pensar, mas é você quem escolhe para onde direcionar suas ideias."</p>
-        </div>
-      </div>
-    
+
     </div>
-    
+
+    <div class="provas-card">
+        <div class="provas-icone">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+                <polyline points="14 2 14 8 20 8" />
+                <line x1="16" y1="13" x2="8" y2="13" />
+                <line x1="16" y1="17" x2="8" y2="17" />
+            </svg>
+        </div>
+        <div class="provas-conteudo">
+            <h3>Simulados com provas anteriores</h3>
+            <p>Treine com questões de Vestibulinhos passados – disponíveis gratuitamente no site oficial.</p>
+            <a href="https://vestibulinho.etec.sp.gov.br/provas-gabaritos/" target="_blank" class="btn-provas">
+                Acessar provas anteriores →
+            </a>
+        </div>
+    </div>
+
+    <section class="mapa-section">
+        <div class="mapa-container">
+            <div class="mapa-header">
+                <div class="icone-mapa">
+                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                        <circle cx="12" cy="10" r="3" />
+                    </svg>
+                </div>
+                <h2>ETECs da Região do ABC</h2>
+                <p class="mapa-sub">Clique nos marcadores para ver mais informações</p>
+            </div>
+            <div id="mapa-etecs"
+                style="width: 100%; height: 400px; border-radius: 20px; overflow: hidden; box-shadow: 0 8px 30px rgba(0,0,0,0.06);">
+            </div>
+        </div>
+    </section>
+
 
     <footer>
         <div class="footer-conteudo">
@@ -225,8 +292,9 @@
                     <img src="../imgs/logo.png" alt="Logo do site" class="logo-footer">
                     <h3>Seu Futuro</h3>
                 </div>
-                <p class="footer-quote">“Apoiando estudantes na rotina escolar, nas escolhas de carreira e no cuidado com a saúde mental.”</p>
-                
+                <p class="footer-quote">“Apoiando estudantes na rotina escolar, nas escolhas de carreira e no cuidado
+                    com a saúde mental.”</p>
+
                 <div class="ods-section">
                     <span>Em apoio às ODS da ONU:</span>
                     <div class="ods-links">
@@ -263,10 +331,12 @@
                     <a href="https://www.cvv.org.br/" target="_blank" class="apoio-titulo">Chat e e-mail do CVV</a>
                 </div>
                 <div class="apoio-item">
-                    <a href="https://www.ribeiraopires.sp.gov.br/portal/secretarias-paginas/13/setores-da-saude/" target="_blank" class="apoio-titulo">CAPS RP — SUS</a>
+                    <a href="https://www.ribeiraopires.sp.gov.br/portal/secretarias-paginas/13/setores-da-saude/"
+                        target="_blank" class="apoio-titulo">CAPS RP — SUS</a>
                 </div>
                 <div class="apoio-item">
-                    <a href="https://www.gov.br/saude/pt-br/composicao/saes/desmad/raps/caps" target="_blank" class="apoio-titulo">CAPS — SUS</a>
+                    <a href="https://www.gov.br/saude/pt-br/composicao/saes/desmad/raps/caps" target="_blank"
+                        class="apoio-titulo">CAPS — SUS</a>
                 </div>
             </div>
 
@@ -276,7 +346,7 @@
                     <img class="logo_cps" src="../imgs/etec_mcm.png" alt="Logo ETEC MCM / CPS">
                 </a>
                 <p class="curso-info">Curso Técnico em Informática para Internet — 2º Ano F</p>
-                
+
                 <p class="integrantes-label">Integrantes do projeto:</p>
                 <ul class="integrantes-list">
                     <li><a href="https://github.com/alanafiorelini1" target="_blank">Alana Fiorelini</a></li>
@@ -285,16 +355,17 @@
                     <li><a href="https://github.com/EmillyyCampos" target="_blank">Emilly Jaquelini de Oliveira</a></li>
                     <li><a href="https://github.com/eloisamendes" target="_blank">Eloisa Mendes Nunes</a></li>
                 </ul>
-    
-                <a href="https://github.com/BeatrizVihh/Feira-Tecnologica-2026" target="_blank" class="github-repo-link">
+
+                <a href="https://github.com/BeatrizVihh/Feira-Tecnologica-2026" target="_blank"
+                    class="github-repo-link">
                     <img src="../imgs/github.webp" alt="GitHub">
                     <span>Repositório no GitHub</span>
                 </a>
             </div>
         </div>
-    
+
         <hr>
-    
+
         <div class="sub-footer">
             <p>© 2026 Seu Futuro - ETEC. Projeto acadêmico sem fins lucrativos.</p>
             <p>Este site não substitui atendimento profissional de saúde.</p>
@@ -338,7 +409,7 @@
     </script>
 
 
-  <script src="etec.js"></script>
+    <script src="etec.js"></script>
 
 </body>
 

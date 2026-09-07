@@ -702,12 +702,165 @@ header h1 {
   }
 }
 
-
-
 @media (max-width: 850px) {
   .comparacao-grid {
     grid-template-columns: 1fr;
   }
+}
+
+.provas-card {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    background: #f9f8fe;
+    border-radius: 20px;
+    padding: 28px 32px;
+    margin: 32px auto 0;
+    max-width: 1200px;
+    border: 1px solid #ede9fe;
+    width: 100%;
+    box-sizing: border-box;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.provas-card:hover {
+    box-shadow: 0 8px 28px rgba(110, 86, 207, 0.08);
+    transform: translateY(-2px);
+}
+
+.provas-card .provas-icone {
+    width: 56px;
+    height: 56px;
+    background: #e6f4ea;
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #137333;
+    flex-shrink: 0;
+}
+
+.provas-card .provas-icone svg {
+    width: 28px;
+    height: 28px;
+}
+
+.provas-card .provas-conteudo {
+    flex: 1;
+}
+
+.provas-card h3 {
+    font-size: 1.15rem;
+    color: #1e1b4b;
+    margin: 0 0 4px;
+}
+
+.provas-card p {
+    font-size: 0.95rem;
+    color: #6a6a82;
+    margin: 0 0 12px;
+    line-height: 1.5;
+}
+
+.provas-card .btn-provas {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: #6d5df5;
+    color: white;
+    padding: 10px 24px;
+    border-radius: 999px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: background 0.2s, transform 0.2s;
+}
+
+.provas-card .btn-provas:hover {
+    background: #5a4ad1;
+    transform: scale(1.02);
+}
+
+@media (max-width: 700px) {
+    .provas-card {
+        flex-direction: column;
+        align-items: flex-start;
+        text-align: left;
+        margin: 24px 16px 0;
+        width: calc(100% - 32px);
+        padding: 24px 20px;
+    }
+
+    .provas-card .provas-icone {
+        width: 48px;
+        height: 48px;
+    }
+
+    .provas-card .provas-icone svg {
+        width: 24px;
+        height: 24px;
+    }
+
+    .provas-card .btn-provas {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+/* ===== MAPA DAS ETECS ===== */
+.mapa-section {
+    max-width: 1200px;
+    margin: 60px auto 0;
+    padding: 0 20px;
+}
+
+.mapa-container {
+    background: #ffffff;
+    border-radius: 28px;
+    padding: 32px;
+    border: 1px solid #f0edfe;
+    box-shadow: 0 10px 30px rgba(110, 86, 207, 0.05);
+}
+
+.mapa-header {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+.icone-mapa {
+    width: 48px;
+    height: 48px;
+    background: #ede9fe;
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #6d5df5;
+}
+
+.mapa-header h2 {
+    font-size: 1.4rem;
+    color: #1e1b4b;
+    margin: 0;
+}
+
+.mapa-sub {
+    color: #6a6a82;
+    font-size: 0.95rem;
+    margin: 0 0 0 auto;
+}
+
+@media (max-width: 700px) {
+    .mapa-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .mapa-sub {
+        margin-left: 0;
+    }
 }
 
 /* Design do rodapé */

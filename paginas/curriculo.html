@@ -158,14 +158,32 @@
             align-items: center;
         }
 
+        .item-dinamico input {
+            flex: 1;
+            min-width: 0;
+            padding: 10px 12px;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            font-size: 14px;
+        }
+
         .item-dinamico-duplo {
             display: grid;
-            grid-template-columns: 1fr 1fr;
+            grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
             gap: 8px;
             padding: 10px;
             background-color: #f9f9f9;
             border-radius: 8px;
             align-items: flex-start;
+            max-width: 100%;
+            box-sizing: border-box;
+        }
+
+        .item-dinamico-duplo input,
+        .item-dinamico-duplo textarea {
+            min-width: 0;
+            width: 100%;
+            box-sizing: border-box;
         }
 
         .item-dinamico-duplo-full {
@@ -226,6 +244,18 @@
         @media (max-width: 850px) {
             .container-curriculo {
                 grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 500px) {
+            .item-dinamico-duplo {
+                grid-template-columns: 1fr;
+            }
+
+            .item-dinamico-duplo .btn-remover {
+                grid-column: 1 / -1;
+                width: 100%;
+                height: 40px;
             }
         }
     </style>
@@ -300,7 +330,8 @@
             <div class="form-group">
                 <label>Formação Escolar / Curso Técnico</label>
                 <div id="formacoes-lista" class="lista-dinamica"></div>
-                <button type="button" class="button-secundario" onclick="adicionarFormacao()">+ Adicionar formação</button>
+                <button type="button" class="button-secundario" onclick="adicionarFormacao()">+ Adicionar
+                    formação</button>
             </div>
 
             <!-- Cursos Complementares -->
@@ -314,13 +345,15 @@
             <div class="form-group">
                 <label>Projetos Escolares</label>
                 <div id="projetos-lista" class="lista-dinamica"></div>
-                <button type="button" class="button-secundario" onclick="adicionarProjeto()">+ Adicionar projeto</button>
+                <button type="button" class="button-secundario" onclick="adicionarProjeto()">+ Adicionar
+                    projeto</button>
             </div>
 
             <div class="form-group">
                 <label>Habilidades</label>
                 <div id="habilidades-lista" class="lista-dinamica"></div>
-                <button type="button" class="button-secundario" onclick="adicionarHabilidade()">+ Adicionar habilidade</button>
+                <button type="button" class="button-secundario" onclick="adicionarHabilidade()">+ Adicionar
+                    habilidade</button>
             </div>
 
             <button class="button" onclick="gerarPDF()">Baixar Currículo em PDF</button>
@@ -439,43 +472,43 @@
     </footer>
 
     <script src="./curriculo.js"></script>
-        <script>
-            // Script da animação suave entre páginas
-            document.addEventListener('DOMContentLoaded', () => {
-                // Seleciona todos os links do site
-                const links = document.querySelectorAll('a[href]');
+    <script>
+        // Script da animação suave entre páginas
+        document.addEventListener('DOMContentLoaded', () => {
+            // Seleciona todos os links do site
+            const links = document.querySelectorAll('a[href]');
 
-                links.forEach(link => {
-                    link.addEventListener('click', (e) => {
-                        const href = link.getAttribute('href');
+            links.forEach(link => {
+                link.addEventListener('click', (e) => {
+                    const href = link.getAttribute('href');
 
-                        if (
-                            !href ||
-                            href.startsWith('#') ||
-                            href.startsWith('javascript:') ||
-                            link.target === '_blank' ||
-                            link.hostname !== window.location.hostname
-                        ) {
-                            return;
-                        }
+                    if (
+                        !href ||
+                        href.startsWith('#') ||
+                        href.startsWith('javascript:') ||
+                        link.target === '_blank' ||
+                        link.hostname !== window.location.hostname
+                    ) {
+                        return;
+                    }
 
-                        e.preventDefault();
+                    e.preventDefault();
 
-                        document.body.classList.add('fade-out');
+                    document.body.classList.add('fade-out');
 
-                        setTimeout(() => {
-                            window.location.href = href;
-                        }, 200);
-                    });
+                    setTimeout(() => {
+                        window.location.href = href;
+                    }, 200);
                 });
             });
+        });
 
-            window.addEventListener('pageshow', (event) => {
-                if (event.persisted) {
-                    document.body.classList.remove('fade-out');
-                }
-            });
-        </script>
+        window.addEventListener('pageshow', (event) => {
+            if (event.persisted) {
+                document.body.classList.remove('fade-out');
+            }
+        });
+    </script>
 </body>
 
 </html>

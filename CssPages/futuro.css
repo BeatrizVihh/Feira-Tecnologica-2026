@@ -2339,3 +2339,218 @@ footer hr {
         text-align: center;
     }
 }
+
+/* ============================================
+   Responsividade — Futuro & Carreiras (add-on)
+   ============================================ */
+
+.pritexto {
+  display: block;
+  text-align: center;
+  padding: 0 1rem;
+  font-size: clamp(1.75rem, 6vw, 2.5rem);
+  line-height: 1.15;
+}
+
+/* Badge superior */
+.titulo {
+  margin-left: auto;
+  margin-right: auto;
+  font-size: clamp(0.78rem, 2.8vw, 0.85rem);
+  padding: 6px 14px;
+}
+
+/* Parágrafo descritivo */
+.segtexto {
+  padding: 0 1rem;
+  font-size: 0.98rem;
+  line-height: 1.5;
+}
+
+/* Wrapper geral */
+.profissoes-wrapper {
+  padding: 0 16px;
+}
+
+/* Header "Página de Profissões" — mais compacto */
+.profissoes-header {
+  margin-top: 32px;
+  gap: 10px;
+}
+
+.dadosimg {
+  width: 38px;
+  height: 38px;
+  object-fit: contain;
+}
+
+.tertxt {
+  font-size: 16px;
+}
+
+/* Grid de cards: corrige overflow em larguras intermediárias */
+.cards-container {
+  grid-template-columns: repeat(auto-fit, minmax(min(280px, 100%), 1fr));
+  justify-content: unset;
+  margin-top: 32px;
+}
+
+/* ============================================
+   ≤ 700px — ajustes finos pra celular
+   ============================================ */
+@media (max-width: 700px) {
+
+  /* Header mais compacto */
+  header {
+    padding: 12px 18px;
+    margin-top: 12px !important;
+  }
+  .logo img { height: 2.25rem; }
+  .logo p   { font-size: 1rem; }
+  .menu-btn {
+    padding: 8px 14px;
+    font-size: 0.85rem;
+  }
+
+  /* Hero */
+  .pritexto { font-size: clamp(1.65rem, 7vw, 2rem); }
+  .segtexto { font-size: 0.92rem; }
+
+  /* Cards */
+  .cards-container { gap: 14px; }
+  .card {
+    min-height: auto;
+    padding: 20px;
+    border-radius: 22px;
+  }
+  .card h2 { font-size: 16px; }
+  .card p  { font-size: 13px; }
+  .icone {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 14px;
+  }
+
+  /* Teste vocacional */
+  .teste-vocacional {
+    margin: 50px auto 0;
+    gap: 26px;
+  }
+  .imagem-teste {
+    height: 240px;
+    border-radius: 22px;
+    border-width: 10px;
+  }
+  .card-pergunta {
+    padding: 22px 18px;
+    border-radius: 22px;
+  }
+  .card-pergunta h3 { font-size: 16px; }
+  .titulo-pergunta { font-size: 14px; }
+  .contador { font-size: 12px; }
+  .alternativa {
+    padding: 13px 15px;
+    font-size: 13.5px;
+    min-height: auto;
+  }
+  .radio {
+    width: 22px;
+    height: 22px;
+  }
+  .radio::after {
+    width: 8px;
+    height: 8px;
+  }
+  .botao-voltar,
+  .botao-refazer {
+    font-size: 14px;
+    padding: 12px 18px;
+  }
+
+  /* Banner currículo */
+  .banner-curriculo {
+    margin: 30px 16px 0;
+    padding: 18px 20px;
+  }
+  .banner-textos h3 { font-size: 15px; }
+  .banner-textos p  { font-size: 13px; }
+  .banner-botao {
+    width: 100%;
+    justify-content: center;
+  }
+
+  /* Seção entrevista */
+  #entrevista {
+    padding: 0 16px;
+    margin-top: 50px;
+    margin-bottom: 40px;
+  }
+  .titulo-entrevista h2 { font-size: 18px; }
+  .card-entrevista {
+    padding: 24px 20px;
+    border-radius: 20px;
+  }
+  .card-entrevista h3 { font-size: 16px; }
+  .card-entrevista p  { font-size: 13px; }
+
+  /* Modais */
+  .modal-profissao {
+    padding: 22px 20px;
+    border-radius: 22px;
+  }
+}
+
+@media (max-width: 420px) {
+
+  .titulo   { font-size: 0.75rem; padding: 5px 11px; }
+  .pritexto { font-size: 1.5rem; }
+  .segtexto { font-size: 0.88rem; }
+
+  .profissoes-header { margin-top: 26px; }
+  .dadosimg { width: 34px; height: 34px; }
+  .tertxt   { font-size: 15px; }
+
+  .card { padding: 18px 16px; border-radius: 20px; }
+
+  .imagem-teste {
+    height: 200px;
+    border: 8px solid #ffffff;
+  }
+  .card-pergunta {
+    padding: 20px 16px;
+    border-radius: 20px;
+  }
+  .card-pergunta h3 { font-size: 15px; }
+  .alternativa {
+    font-size: 13px;
+    padding: 12px 14px;
+  }
+  .area-resultado h3 { font-size: 15px; }
+  .area-resultado p  { font-size: 13px; }
+
+  .modal-profissao {
+    padding: 20px 18px;
+    border-radius: 20px;
+  }
+  .modal-profissao > h2 { font-size: 20px; }
+  .modal-subtitulo      { font-size: 13px; }
+  .info-profissao p     { font-size: 13px; }
+
+  footer { padding: 40px 20px 24px; }
+}
+
+.icone svg {
+    width: 22px;
+    height: 22px;
+    stroke: currentColor;
+    fill: none;
+    display: block;
+}
+
+.modal-icone svg {
+    width: 26px;
+    height: 26px;
+    stroke: currentColor;
+    fill: none;
+    display: block;
+}

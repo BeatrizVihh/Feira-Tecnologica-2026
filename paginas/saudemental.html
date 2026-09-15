@@ -25,7 +25,10 @@
       <p>Saúde Mental</p>
     </a>
     <button class="menu-btn" onclick="toggleMenu()">
-      <span> ☰ Menu</span>
+      <span>
+        <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+        Menu
+      </span>
     </button>
 
   </header>
@@ -44,14 +47,20 @@
   <section id="saude"
     className="... bg-gradient-to-b from-[#F5F7FF] via-[#EBE8FF] to-[#F5F7FF] text-[#1E1B4B] overflow-hidden">
     <div class="div-titulo">
-      <span class="hero-badge">.✦ ݁˖ Em apoio aos ODS 3 e 4 da ONU.</span>
+      <span class="hero-badge">
+        <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z"/><path d="M5 3v4"/><path d="M19 17v4"/><path d="M3 5h4"/><path d="M17 19h4"/></svg>
+        Em apoio aos ODS 3 e 4 da ONU.
+      </span>
       <h1 class="titulo-inicio">Cuidar de você é parte dos estudos</h1>
       <p class="subtitulo-inicio">Recursos para momentos de ansiedade, cansaço e dúvida.</p>
     </div>
     <div class="card breathing">
       <div class="breathing-head">
         <h3 class="card-title">
-          <span class="icon-mini">🜁</span> Exercício de Respiração
+          <span class="icon-mini">
+            <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9.59 4.59A2 2 0 1 1 11 8H2"/><path d="M12.59 19.41A2 2 0 1 0 14 16H2"/><path d="M17.73 7.73A2.5 2.5 0 1 1 19.5 12H2"/></svg>
+          </span>
+          Exercício de Respiração
         </h3>
         <p class="note">Respire acompanhando o círculo. 4-4-4 acalma o sistema nervoso.</p>
       </div>
@@ -84,15 +93,25 @@
         </div>
 
         <div class="steps" id="stepsBar">
-          <button class="step active" data-step="0"><span>👁</span></button>
+          <button class="step active" data-step="0" aria-label="Ver">
+            <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+          </button>
           <div class="connector"></div>
-          <button class="step" data-step="1"><span>✋</span></button>
+          <button class="step" data-step="1" aria-label="Tocar">
+            <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 11V6a2 2 0 0 0-2-2v0a2 2 0 0 0-2 2v0"/><path d="M14 10V4a2 2 0 0 0-2-2v0a2 2 0 0 0-2 2v2"/><path d="M10 10.5V6a2 2 0 0 0-2-2v0a2 2 0 0 0-2 2v8"/><path d="M18 8a2 2 0 1 1 4 0v6a8 8 0 0 1-8 8h-2c-2.8 0-4.5-.86-5.99-2.34l-3.6-3.6a2 2 0 0 1 2.83-2.82L7 15"/></svg>
+          </button>
           <div class="connector"></div>
-          <button class="step" data-step="2"><span>👂</span></button>
+          <button class="step" data-step="2" aria-label="Ouvir">
+            <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 8.5a6.5 6.5 0 1 1 13 0c0 6-6 6-6 10a3.5 3.5 0 1 1-7 0"/><path d="M15 8.5a2.5 2.5 0 0 0-5 0v1a2 2 0 1 1 0 4"/></svg>
+          </button>
           <div class="connector"></div>
-          <button class="step" data-step="3"><span>🜁</span></button>
+          <button class="step" data-step="3" aria-label="Cheirar">
+            <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M12 16.5A4.5 4.5 0 1 1 7.5 12 4.5 4.5 0 1 1 12 7.5a4.5 4.5 0 1 1 4.5 4.5 4.5 4.5 0 1 1-4.5 4.5"/><path d="M12 7.5V9"/><path d="M7.5 12H9"/><path d="M16.5 12H15"/><path d="M12 16.5V15"/></svg>
+          </button>
           <div class="connector"></div>
-          <button class="step" data-step="4"><span>🍴</span></button>
+          <button class="step" data-step="4" aria-label="Saborear">
+            <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 2v7c0 1.1.9 2 2 2h4a2 2 0 0 0 2-2V2"/><path d="M7 2v20"/><path d="M21 15V2a5 5 0 0 0-5 5v6c0 1.1.9 2 2 2h3Zm0 0v7"/></svg>
+          </button>
         </div>
 
         <div class="step-prompt">
@@ -110,7 +129,9 @@
         <!-- Anti-ansiedade -->
         <div class="card">
           <div class="card-head">
-            <span class="icon-badge lavender"><span>🛡</span></span>
+            <span class="icon-badge lavender">
+              <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            </span>
             <h3 class="card-title-sm">Guia Anti-Ansiedade</h3>
           </div>
           <ul class="bullets">
@@ -125,7 +146,9 @@
         <!-- 5 minutos -->
         <div class="card">
           <div class="card-head">
-            <span class="icon-badge mint"><span>⏱</span></span>
+            <span class="icon-badge mint">
+              <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            </span>
             <h3 class="card-title-sm">Regra dos 5 Minutos</h3>
           </div>
           <p class="body">
@@ -141,54 +164,58 @@
     <!-- Burnout -->
     <div class="card wide">
       <div class="card-head">
-        <span class="icon-badge rose"><span>⚠</span></span>
-        <h3 class="card-title-sm">Prevenindo o burnout escolar</h3>
+        <span class="icon-badge rose">
+          <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+        </span>
+        <div>
+          <h3 class="card-title-sm">Prevenindo o burnout escolar</h3>
+          <p class="card-sub">Toque em um card para ver como aplicar no dia a dia</p>
+        </div>
       </div>
-      <div class="bullets-grid">
-        <div class="bullet">Durma de 7 a 9 horas — nada substitui o sono.</div>
-        <div class="bullet">Reserve tempo para o que te dá prazer, mesmo que breve.</div>
-        <div class="bullet">Reduza o uso de telas antes de dormir.</div>
-        <div class="bullet">Faça pausas reais durante o estudo (Pomodoro ajuda).</div>
-        <div class="bullet">Se o cansaço não passar, procure apoio profissional.</div>
+      <div class="bullets-grid" id="burnoutGrid">
+        <button class="bullet interactive" data-tip="0">Durma de 7 a 9 horas — nada substitui o sono.</button>
+        <button class="bullet interactive" data-tip="1">Reserve tempo para o que te dá prazer, mesmo que breve.</button>
+        <button class="bullet interactive" data-tip="2">Reduza o uso de telas antes de dormir.</button>
+        <button class="bullet interactive" data-tip="3">Faça pausas reais durante o estudo (Pomodoro ajuda).</button>
+        <button class="bullet interactive" data-tip="4">Se o cansaço não passar, procure apoio profissional.</button>
+      </div>
+      <div class="tip-detail" id="tipDetail" hidden>
+        <button class="tip-close" id="tipClose" aria-label="Fechar">×</button>
+        <h4 class="tip-title" id="tipTitle"></h4>
+        <p class="tip-body" id="tipBody"></p>
+        <ul class="tip-steps" id="tipSteps"></ul>
       </div>
     </div>
 
-    <!-- Futuro / Erro -->
+    <!-- Pequenas Vitórias / Erro -->
     <div class="grid-2">
-      <div class="card">
+      <div class="card wins">
         <div class="card-head">
-          <span class="icon-badge lavender"><span>♡</span></span>
-          <h3 class="card-title-sm">O futuro não é uma linha reta</h3>
-        </div>
-        <p class="body">
-          É normal não ter certeza sobre a profissão. Mudar de ideia não é
-          fracasso — é aprendizado. Experimente, erre, ajuste e siga.
-        </p>
-        <div class="quotes">
-          <div class="quote">
-            <span class="quote-mark">❝</span>
-            <p class="quote-text">No 2º ano eu não sabia o que queria. Hoje curso algo que descobri só aos 22. Não há
-              linha reta — há caminho.</p>
-            <p class="quote-author">— Estudante de Design</p>
-          </div>
-          <div class="quote">
-            <span class="quote-mark">❝</span>
-            <p class="quote-text">Reprovei em Matemática no técnico. Aquilo me ensinou a estudar de outro jeito — hoje é
-              minha área favorita.</p>
-            <p class="quote-author">— Ex-aluno ETEC</p>
-          </div>
-          <div class="quote">
-            <span class="quote-mark">❝</span>
-            <p class="quote-text">Achei que tinha que decidir a vida aos 17. Ninguém tem. Decidir é um processo, não um
-              prazo.</p>
-            <p class="quote-author">— Universitária</p>
+          <span class="icon-badge lavender">
+            <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          </span>
+          <div>
+            <h3 class="card-title-sm">Caixinha de Pequenas Vitórias</h3>
+            <p class="card-sub">Anote uma conquista do dia. Ela fica salva aqui, neste navegador.</p>
           </div>
         </div>
+
+        <form class="wins-form" id="winsForm" autocomplete="off">
+          <input type="text" id="winsInput" maxlength="140"
+            placeholder="Ex: terminei um resumo, pedi ajuda, respirei antes da prova..." />
+          <button type="submit">+ Adicionar</button>
+        </form>
+
+        <div class="wins-list" id="winsList"></div>
+        <p class="wins-empty" id="winsEmpty">Nenhuma vitória registrada ainda. Cada pequena vitória conta.</p>
+        <p class="wins-count" id="winsCount"></p>
       </div>
 
       <div class="card">
         <div class="card-head">
-          <span class="icon-badge mint"><span>↻</span></span>
+          <span class="icon-badge mint">
+            <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 4 23 10 17 10"/><polyline points="1 20 1 14 7 14"/><path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"/></svg>
+          </span>
           <h3 class="card-title-sm">Desmitificando o erro</h3>
         </div>
         <p class="body">
@@ -207,35 +234,43 @@
     <!-- Cartão de apoio -->
     <div class="card support">
       <div class="card-head">
-        <span class="icon-badge lavender-solid"><span>॔</span></span>
+        <span class="icon-badge lavender-solid">
+          <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="m4.93 4.93 4.24 4.24"/><path d="m14.83 9.17 4.24-4.24"/><path d="m14.83 14.83 4.24 4.24"/><path d="m9.17 14.83-4.24 4.24"/><circle cx="12" cy="12" r="4"/></svg>
+        </span>
         <div>
           <h3 class="card-title">Cartão de Apoio</h3>
           <p class="card-sub">Onde buscar ajuda psicológica gratuita ou acessível</p>
         </div>
       </div>
       <div class="support-grid">
-        <a href__="tel:188" class="support-card">
-          <span class="s-icon lavender">☎</span>
+        <a href="tel:188" class="support-card">
+          <span class="s-icon lavender">
+            <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          </span>
           <p class="s-title">CVV — 188</p>
           <p class="s-text">Apoio emocional gratuito 24h, sigiloso</p>
         </a>
-        <a href__="https://www.gov.br/saude/pt-br/assuntos/saude-de-a-a-z/c/caps" target="_blank" rel="noreferrer"
+        <a href="https://www.gov.br/saude/pt-br/assuntos/saude-de-a-a-z/c/caps" target="_blank" rel="noreferrer"
           class="support-card">
-          <span class="s-icon mint">♡</span>
+          <span class="s-icon mint">
+            <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+          </span>
           <p class="s-title">CAPS</p>
           <p class="s-text">Centros de Atenção Psicossocial do SUS</p>
         </a>
         <div class="support-card">
-          <span class="s-icon rose">👁</span>
+          <span class="s-icon rose">
+            <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+          </span>
           <p class="s-title">Clínicas-escola</p>
           <p class="s-text">Universidades oferecem atendimento gratuito ou acessível</p>
         </div>
       </div>
       <p class="disclaimer">
-        ⚠️ Este site não substitui atendimento profissional. Se o que você sente
+        <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:-3px;margin-right:6px;"><path d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+        Este site não substitui atendimento profissional. Se o que você sente
         está difícil de lidar, procure ajuda — você merece.
       </p>
-    </div>
     </div>
   </section>
 
@@ -317,6 +352,168 @@
       active = active < 4 ? active + 1 : 0; renderSteps();
     });
     renderSteps();
+
+    // ============================================
+    // Burnout: painel de dicas
+    // ============================================
+    const BURNOUT_TIPS = [
+      {
+        title: "Durma de 7 a 9 horas",
+        body: "O sono é quando o cérebro consolida o que você estudou, regula emoções e limpa o cansaço acumulado. Trocar sono por estudo costuma sair caro: você memoriza menos e fica mais ansioso.",
+        steps: [
+          "Defina um horário fixo para dormir e acordar — até no fim de semana.",
+          "Desligue telas 1h antes de deitar: luz azul atrasa o sono.",
+          "Evite cafeína (café, energético, refrigerante) depois das 15h.",
+          "Se em 20 minutos não dormir, levante e faça algo calmo com pouca luz."
+        ]
+      },
+      {
+        title: "Reserve tempo para o que te dá prazer",
+        body: "Não é recompensa, é manutenção. Sem momentos de prazer, o cérebro entra em modo de sobrevivência e o estudo vira peso. Uma pausa curta e intencional rende mais do que 2h arrastando.",
+        steps: [
+          "Reserve 20 a 30 min por dia para algo que te faz bem — sem culpa.",
+          "Pode ser música, série, caminhada, ligar para alguém, jogar, desenhar.",
+          "Trate esse tempo como compromisso, não como 'se sobrar'.",
+          "Se sentir culpa, lembre: descanso também é parte do estudo."
+        ]
+      },
+      {
+        title: "Reduza o uso de telas antes de dormir",
+        body: "Telas atrasam a melatonina (hormônio do sono) e mantêm o cérebro em estado de alerta. Você dorme pior, acorda cansado e a ansiedade aumenta no dia seguinte. É um ciclo.",
+        steps: [
+          "Estabeleça um 'toque de recolher' digital: 1h antes de dormir.",
+          "Troque o scroll por leitura leve, música calma ou respiração.",
+          "Ative o modo noturno/amarelo se precisar usar o celular.",
+          "Deixe o celular longe da cama — carregando em outro cômodo."
+        ]
+      },
+      {
+        title: "Faça pausas reais durante o estudo",
+        body: "Pomodoro é simples: 25 min focados + 5 min de pausa, a cada 4 ciclos 15-30 min. Sem pausas, você não estuda mais — só fica mais tempo na frente do material rendendo cada vez menos.",
+        steps: [
+          "25 min de foco total (sem celular, sem abas abertas).",
+          "5 min de pausa REAL: levantar, beber água, olhar pela janela.",
+          "A cada 4 ciclos, pausa longa de 15 a 30 min.",
+          "Anote o que te distraiu e volte depois — não abandone o foco."
+        ]
+      },
+      {
+        title: "Se o cansaço não passar, procure apoio",
+        body: "Burnout não é frescura nem preguiça. É um estado de esgotamento que precisa de cuidado — e quanto antes, mais fácil de sair. Pedir ajuda é sinal de força, não de fraqueza.",
+        steps: [
+          "Converse com alguém de confiança: família, amigo, professor, coordenador.",
+          "Procure a escola: muitos têm serviço de orientação ou psicologia.",
+          "Use os canais gratuitos: CVV (188) e CAPS do SUS (veja o Cartão de Apoio).",
+          "Se tiver plano de saúde ou clínica-escola por perto, vale buscar também."
+        ]
+      }
+    ];
+
+    const burnoutGrid = document.getElementById("burnoutGrid");
+    const tipDetail   = document.getElementById("tipDetail");
+    const tipTitle    = document.getElementById("tipTitle");
+    const tipBody     = document.getElementById("tipBody");
+    const tipSteps    = document.getElementById("tipSteps");
+    let openTip = -1;
+
+    function openTipPanel(i) {
+      const tip = BURNOUT_TIPS[i];
+      tipTitle.textContent = tip.title;
+      tipBody.textContent = tip.body;
+      tipSteps.innerHTML = "";
+      tip.steps.forEach(s => {
+        const li = document.createElement("li");
+        li.textContent = s;
+        tipSteps.appendChild(li);
+      });
+      tipDetail.hidden = false;
+      tipDetail.style.animation = "none";
+      void tipDetail.offsetHeight;
+      tipDetail.style.animation = "";
+    }
+    function closeTipPanel() {
+      tipDetail.hidden = true;
+      openTip = -1;
+      document.querySelectorAll(".bullet.interactive").forEach(b => b.classList.remove("active"));
+    }
+    burnoutGrid.querySelectorAll(".bullet.interactive").forEach(btn => {
+      btn.addEventListener("click", () => {
+        const i = Number(btn.dataset.tip);
+        if (i === openTip) { closeTipPanel(); return; }
+        document.querySelectorAll(".bullet.interactive").forEach(b => b.classList.remove("active"));
+        btn.classList.add("active");
+        openTip = i;
+        openTipPanel(i);
+      });
+    });
+    document.getElementById("tipClose").addEventListener("click", closeTipPanel);
+
+    // ============================================
+    // Caixinha de Pequenas Vitórias
+    // ============================================
+    const WINS_KEY = "seuFuturoWins";
+    let wins = [];
+    try { wins = JSON.parse(localStorage.getItem(WINS_KEY)) || []; } catch (e) { wins = []; }
+
+    const winsList  = document.getElementById("winsList");
+    const winsEmpty = document.getElementById("winsEmpty");
+    const winsCount = document.getElementById("winsCount");
+
+    function saveWins() {
+      try { localStorage.setItem(WINS_KEY, JSON.stringify(wins)); } catch (e) {}
+    }
+
+    function renderWins() {
+      winsList.innerHTML = "";
+      if (!wins.length) {
+        winsEmpty.style.display = "block";
+        winsCount.textContent = "";
+        return;
+      }
+      winsEmpty.style.display = "none";
+      wins.forEach((w, i) => {
+        const el = document.createElement("div");
+        el.className = "win-item";
+
+        const star = document.createElement("span");
+        star.className = "win-star";
+        star.textContent = "✦";
+
+        const text = document.createElement("span");
+        text.className = "win-text";
+        text.textContent = w;
+
+        const del = document.createElement("button");
+        del.className = "win-del";
+        del.setAttribute("aria-label", "Remover");
+        del.textContent = "×";
+        del.addEventListener("click", () => {
+          wins.splice(i, 1);
+          saveWins();
+          renderWins();
+        });
+
+        el.append(star, text, del);
+        winsList.appendChild(el);
+      });
+      winsCount.textContent = wins.length === 1
+        ? "1 vitória registrada"
+        : wins.length + " vitórias registradas";
+    }
+
+    document.getElementById("winsForm").addEventListener("submit", (e) => {
+      e.preventDefault();
+      const input = document.getElementById("winsInput");
+      const v = input.value.trim();
+      if (!v) return;
+      wins.unshift(v);
+      saveWins();
+      input.value = "";
+      input.focus();
+      renderWins();
+    });
+
+    renderWins();
   </script>
 
   <footer>
@@ -413,43 +610,42 @@
     }
   </script>
 
-    <script>
-      // Script da animação suave entre páginas
-      document.addEventListener('DOMContentLoaded', () => {
-        // Seleciona todos os links do site
-        const links = document.querySelectorAll('a[href]');
+  <script>
+    // Script da animação suave entre páginas
+    document.addEventListener('DOMContentLoaded', () => {
+      const links = document.querySelectorAll('a[href]');
 
-        links.forEach(link => {
-          link.addEventListener('click', (e) => {
-            const href = link.getAttribute('href');
+      links.forEach(link => {
+        link.addEventListener('click', (e) => {
+          const href = link.getAttribute('href');
 
-            if (
-              !href ||
-              href.startsWith('#') ||
-              href.startsWith('javascript:') ||
-              link.target === '_blank' ||
-              link.hostname !== window.location.hostname
-            ) {
-              return;
-            }
+          if (
+            !href ||
+            href.startsWith('#') ||
+            href.startsWith('javascript:') ||
+            link.target === '_blank' ||
+            link.hostname !== window.location.hostname
+          ) {
+            return;
+          }
 
-            e.preventDefault();
+          e.preventDefault();
 
-            document.body.classList.add('fade-out');
+          document.body.classList.add('fade-out');
 
-            setTimeout(() => {
-              window.location.href = href;
-            }, 200);
-          });
+          setTimeout(() => {
+            window.location.href = href;
+          }, 200);
         });
       });
+    });
 
-      window.addEventListener('pageshow', (event) => {
-        if (event.persisted) {
-          document.body.classList.remove('fade-out');
-        }
-      });
-    </script>
+    window.addEventListener('pageshow', (event) => {
+      if (event.persisted) {
+        document.body.classList.remove('fade-out');
+      }
+    });
+  </script>
 </body>
 
 </html>

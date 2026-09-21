@@ -1187,15 +1187,12 @@ footer hr {
   margin: 32px auto;
 }
 
-<<<<<<< HEAD
 /* Provas */
 .provas-card {
   max-width: 1200px;
   width: calc(100% - 40px);
 }
 
-=======
->>>>>>> 416e2cc73651374e13b35aaf2a03d928b1177d0c
 /* Mapa */
 .mapa-section {
   padding: 0 16px;

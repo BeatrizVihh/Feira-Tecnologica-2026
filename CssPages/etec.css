@@ -717,7 +717,11 @@ header h1 {
     padding: 28px 32px;
     margin: 32px auto 0;
     max-width: 1200px;
+<<<<<<< HEAD
     width: calc(100% - 40px);  
+=======
+    width: calc(100% - 40px);     
+>>>>>>> 416e2cc73651374e13b35aaf2a03d928b1177d0c
     border: 1px solid #ede9fe;
     box-sizing: border-box;
     transition: box-shadow 0.3s ease, transform 0.3s ease;
@@ -786,8 +790,13 @@ header h1 {
         flex-direction: column;
         align-items: flex-start;
         text-align: left;
+<<<<<<< HEAD
         margin: 24px auto 0;
         width: calc(100% - 40px);   
+=======
+        margin: 24px auto 0;            
+        width: calc(100% - 40px);      
+>>>>>>> 416e2cc73651374e13b35aaf2a03d928b1177d0c
         padding: 24px 20px;
     }
 
@@ -807,7 +816,6 @@ header h1 {
     }
 }
 
-/* ===== MAPA DAS ETECS ===== */
 .mapa-section {
     max-width: 1200px;
     margin: 60px auto 0;
@@ -1179,12 +1187,15 @@ footer hr {
   margin: 32px auto;
 }
 
+<<<<<<< HEAD
 /* Provas */
 .provas-card {
   max-width: 1200px;
   width: calc(100% - 40px);
 }
 
+=======
+>>>>>>> 416e2cc73651374e13b35aaf2a03d928b1177d0c
 /* Mapa */
 .mapa-section {
   padding: 0 16px;

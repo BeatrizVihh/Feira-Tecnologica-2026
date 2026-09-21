@@ -61,7 +61,8 @@ function trocarFrase() {
     { nome: "ETEC de São Caetano - Jorge Street", endereco: "R. Bel Aliance, 149 - Jardim Sao Caetano, São Caetano do Sul - SP, 09581-420", lat: -23.636850562781245, lng: -46.57770939667885 },
     { nome: "ETEC de Diadema - Juscelino Kubitschek", endereco: "R. Guarani, 735 - Conceição, Diadema - SP, 09991-060", lat: -23.6988051731132, lng: -46.61081657352259 },
     { nome: "ETEC de Mauá", endereco: "R. Ribeirão Preto, 75 - Jardim Pedroso, Mauá - SP, 09370-530", lat: -23.67208069624007, lng: -46.462828231195154},
-    { nome: "ETEC de Ribeirão Pires - Maria Cristina Medeiros", endereco: "R. Bélgica, 88 - Jardim Alvorada, Ribeirão Pires - SP, 09402-060", lat: -23.703900718046356, lng: -46.41376023913388 }
+    { nome: "ETEC de Ribeirão Pires - Maria Cristina Medeiros", endereco: "R. Bélgica, 88 - Jardim Alvorada, Ribeirão Pires - SP, 09402-060", lat: -23.703900718046356, lng: -46.41376023913388 },
+    { nome: "ETEC de Rio Grande da Serra", endereco: "Av. Francisco Morais Ramos, 777 - Jardim Novo Horizonte, Rio Grande da Serra - SP, 09450-000", lat: -23.751425576334544, lng: -46.391052546426366 }
   ];
 
   const map = L.map('mapa-etecs').setView([-23.67, -46.52], 11);
